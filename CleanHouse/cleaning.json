@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Daria Kojuh",
+        "rating": "4.5",
+        "phone": "Relax, do what you love, spend time with your family. Cleaning is our concern.",
+        "email": "dariakojuh@gmail.com",
+        "photo": "https://st.depositphotos.com/1008047/1248/i/950/depositphotos_12486423-stock-photo-beautiful-young-cleaning-lady-isolated.jpg",
+        "company": {
+            "name": "Tidy Tom's",
+            "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+        }
+    },
+    {
+        "name": "Rami Malek",
+        "rating": "5",
+        "phone": "Call us if you want to clean your house.",
+        "email": "ramimalek@gmail.com",
+        "photo": "https://vokrug.tv/pic/person/5/6/9/4/56945e51d1674d9e38a961a777d95bb3.jpg",
+        "company": {
+            "name": "Tide cleaners",
+            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
+        }
+    },
+    {
+        "name": "Anastasia Blok",
+        "rating": "4",
+        "phone": "+375293553525",
+        "email": "block@gmail.com",
+        "photo": "https://i.dailymail.co.uk/i/pix/2011/09/02/article-2032836-0DAC17D000000578-756_468x559.jpg",
+        "company": {
+            "name": "Bubble Shine",
+            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
+        }
+    },
+    {
+        "name": "Alina Karneenko",
+        "rating": "4.2",
+        "phone": "+375293553525",
+        "email": "gkucenko@gmail.com",
+        "photo": "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/42/117/skd181316sdc.jpg",
+        "company": {
+            "name": "Hobort cleaners",
+            "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
+        }
+    },
+    {
+        "name": "Maria Shults",
+        "rating": "3",
+        "phone": "+375293553525",
+        "email": "dmaria@gmail.com",
+        "photo": "https://previews.123rf.com/images/lisafx/lisafx0908/lisafx090800010/5345003-cheerful-cleaning-lady-holding-her-tray-of-cleaning-tools-and-products-isolated-on-white-.jpg",
+        "company": {
+            "name": "Wilmington cleaners",
+            "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
+        }
+    },
+    {
+        "name": "Valeria Miner",
+        "rating": "5",
+        "phone": "+375293553525",
+        "email": "valmin@gmail.com",
+        "photo": "https://www.dhresource.com/0x0/f2/albu/g1/M01/E4/F4/rBVaGFXMOFWAEACcAAHBWYjLpTw825.jpg",
+        "company": {
+            "name": "Royal FineCleaners",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMXK3ykqQ2uzd92S_PSELc3MjkzNMhDkrzDbqmEaNpvzcxXvmlQ&s",
+            
+        }
+    },
+    {
+        "name": "Sasha Myne",
+        "rating": "4",
+        "phone": "+375293553525",
+        "email": "dariakojuh@gmail.com",
+        "photo": "https://previews.123rf.com/images/lisafx/lisafx0908/lisafx090800029/5344991-vermoeide-ongelukkig-poetsvrouw-vergadering-in-haar-mop-emmer-geïsoleerd-op-wit-.jpg",
+        "company": {
+            "name": "Press",
+            "logo": "",
+        }
+    },
+    {
+        "name": "Claudio Cano",
+        "rating": "4.5",
+        "phone": "+375293553525",
+        "email": "dariakojuh@gmail.com",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMylOvIBmFLwk6ZWSaSUz4FeMDHosO6YtgWV7pU2OTwlCQgYUt&s",
+        "company": {
+            "name": "Impressive cleaners",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXnRdgAn3yB47mUE4rA8C5qQBO800r2LWbwMG2tUvo9lweB9N&s",
+        }
+    },
+    {
+        "name": "Liliya Kryble",
+        "rating": "3.3",
+        "phone": "+375293553525",
+        "email": "dariakojuh@gmail.com",
+        "photo": "",
+        "company": {
+            "name": "Greenwash",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPD_XtnFCiEz2cojpngT11Vk8FdvyKf6D1X0y7Zg6hIUCMOHgisQ&s",
+        }
+    },
+    {
+        "name": "Ainane Sagbilova",
+        "rating": "2.1",
+        "phone": "+375293553525",
+        "email": "dariakojuh@gmail.com",
+        "photo": "https://previews.123rf.com/images/dragonimages/dragonimages1711/dragonimages171100727/90318124-cleaning-lady.jpg",
+        "company": {
+            "name": "DRY cleaners",
+            "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
+        }
+    }
+]

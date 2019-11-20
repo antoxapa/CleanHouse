@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z2L-SF-GYe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cleaner InfoVC-->
+        <scene sceneID="l1l-jA-3Ag">
+            <objects>
+                <viewController id="Qu4-sE-Ked" customClass="CleanerInfoVC" customModule="CleanHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rve-BG-pcG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="etA-Eg-Iwp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R9f-fr-NhC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBF-nD-JVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3571.0144927536235" y="72.991071428571431"/>
+        </scene>
+        <!--Companies-->
+        <scene sceneID="IgV-T9-Cn8">
+            <objects>
+                <collectionViewController id="iI2-Xa-myf" customClass="CompaniesCVC" customModule="CleanHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v1q-dr-8QR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VRC-Ge-Kkb">
+                            <size key="itemSize" width="380" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="companyCell" id="c4w-65-9Dk" customClass="CompanyCell" customModule="CleanHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4tx-TA-PuR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FreshRoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbG-vf-RoA">
+                                            <rect key="frame" x="105" y="10" width="299" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="301" id="5Fj-XV-pGw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отдыхайте, занимайтесь любимым делом, проводите время с семьёй. Уборка - это наша забота." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-eQ-twE">
+                                            <rect key="frame" x="105" y="33" width="299" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="299" id="HqO-wD-kgW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-vb-dYC" userLabel="borderView">
+                                            <rect key="frame" x="103" y="99" width="296" height="1"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="vEX-kK-gdv"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-o8-RRY">
+                                            <rect key="frame" x="15" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="RFe-cf-V34"/>
+                                                <constraint firstAttribute="width" constant="80" id="g8v-0A-isl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z5-07-Dh1">
+                                            <rect key="frame" x="105" y="67" width="65" height="23"/>
+                                            <color key="backgroundColor" red="0.74976474049999997" green="0.55915790799999998" blue="0.93337160350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="Z8Q-En-nnI"/>
+                                                <constraint firstAttribute="width" constant="65" id="zff-t8-f2F"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Calculate"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price may vary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-gf-BP3">
+                                            <rect key="frame" x="178" y="65.5" width="43" height="26.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="43" id="Mh5-ye-mcJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wdZ-gf-BP3" firstAttribute="centerY" secondItem="1Z5-07-Dh1" secondAttribute="centerY" id="0Vl-Ph-ULr"/>
+                                        <constraint firstAttribute="trailing" secondItem="ViH-vb-dYC" secondAttribute="trailing" constant="15" id="1iK-EK-0NF"/>
+                                        <constraint firstItem="wdZ-gf-BP3" firstAttribute="leading" secondItem="1Z5-07-Dh1" secondAttribute="trailing" constant="8" id="EGj-v1-BJf"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Z5-07-Dh1" secondAttribute="bottom" constant="10" id="NLd-Vb-uWS"/>
+                                        <constraint firstItem="1Z5-07-Dh1" firstAttribute="leading" secondItem="iCP-o8-RRY" secondAttribute="trailing" constant="10" id="Q2E-is-V3W"/>
+                                        <constraint firstItem="dbG-vf-RoA" firstAttribute="top" secondItem="4tx-TA-PuR" secondAttribute="top" constant="10" id="VPY-7f-yQX"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dbG-vf-RoA" secondAttribute="trailing" constant="10" id="WRM-Gg-gvG"/>
+                                        <constraint firstAttribute="bottom" secondItem="iCP-o8-RRY" secondAttribute="bottom" constant="10" id="XFS-25-zdd"/>
+                                        <constraint firstAttribute="bottom" secondItem="ViH-vb-dYC" secondAttribute="bottom" id="YTR-TH-8i6"/>
+                                        <constraint firstItem="ViH-vb-dYC" firstAttribute="leading" secondItem="iCP-o8-RRY" secondAttribute="trailing" constant="8" id="bEC-r3-FtS"/>
+                                        <constraint firstItem="iCP-o8-RRY" firstAttribute="top" secondItem="4tx-TA-PuR" secondAttribute="top" constant="10" id="cSm-PO-J1U"/>
+                                        <constraint firstItem="dbG-vf-RoA" firstAttribute="leading" secondItem="iCP-o8-RRY" secondAttribute="trailing" constant="10" id="lhc-nX-SAB"/>
+                                        <constraint firstItem="UCV-eQ-twE" firstAttribute="top" secondItem="dbG-vf-RoA" secondAttribute="bottom" id="nVr-9b-QiK"/>
+                                        <constraint firstItem="iCP-o8-RRY" firstAttribute="leading" secondItem="4tx-TA-PuR" secondAttribute="leading" constant="15" id="s8r-Qx-vNl"/>
+                                        <constraint firstItem="UCV-eQ-twE" firstAttribute="leading" secondItem="iCP-o8-RRY" secondAttribute="trailing" constant="10" id="yvm-nz-hfG"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="100"/>
+                                <connections>
+                                    <outlet property="calculateButton" destination="1Z5-07-Dh1" id="2gv-6o-Pnd"/>
+                                    <outlet property="companyLogo" destination="iCP-o8-RRY" id="u8C-Oq-SGB"/>
+                                    <outlet property="companyName" destination="dbG-vf-RoA" id="OAr-1j-UFM"/>
+                                    <outlet property="companyPhoneNumber" destination="UCV-eQ-twE" id="AoC-nD-vNL"/>
+                                    <segue destination="7rb-2K-0MT" kind="show" id="j2i-QA-Hyn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iI2-Xa-myf" id="zhP-wb-rw2"/>
+                            <outlet property="delegate" destination="iI2-Xa-myf" id="wDo-PL-nda"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Companies" id="Pdb-Wc-I9O"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEv-g3-0cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.8550724637685" y="740.625"/>
+        </scene>
+        <!--Company InfoVC-->
+        <scene sceneID="Yng-0H-Cf2">
+            <objects>
+                <viewController id="7rb-2K-0MT" customClass="CompanyInfoVC" customModule="CleanHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynd-1p-i7t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="T3d-bH-O1R"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XST-AE-vqG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37R-Ke-tKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3571.0144927536235" y="740.625"/>
+        </scene>
+        <!--Cleaners-->
+        <scene sceneID="hCG-Zi-yIb">
+            <objects>
+                <collectionViewController id="jqX-bB-o3a" customClass="CleanersCVC" customModule="CleanHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1KS-aV-j64">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1Cw-Sf-xfG">
+                            <size key="itemSize" width="413" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cleanerCell" id="C1O-SC-SlC" customClass="CleanerCell" customModule="CleanHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HY9-v6-IlK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bzR-hE-DV4">
+                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="bQZ-kv-Xof"/>
+                                                <constraint firstAttribute="width" constant="80" id="vti-UZ-elv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8f-yh-c5r">
+                                            <rect key="frame" x="100" y="35.5" width="304" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-7e-EJ5">
+                                            <rect key="frame" x="100" y="10" width="304" height="26.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="304" id="U8o-6x-3Ro"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyl-xz-Qv2">
+                                            <rect key="frame" x="98" y="99" width="301" height="1"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="skD-ZV-bSL"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5A-GU-MVE">
+                                            <rect key="frame" x="100" y="74" width="37.5" height="17"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="v5A-GU-MVE" secondAttribute="bottom" constant="9" id="04a-xk-lqC"/>
+                                        <constraint firstAttribute="bottom" secondItem="Oyl-xz-Qv2" secondAttribute="bottom" id="2Kb-q3-nwZ"/>
+                                        <constraint firstItem="bzR-hE-DV4" firstAttribute="top" secondItem="HY9-v6-IlK" secondAttribute="top" constant="10" id="3lQ-2M-bD0"/>
+                                        <constraint firstItem="bzR-hE-DV4" firstAttribute="leading" secondItem="HY9-v6-IlK" secondAttribute="leading" constant="10" id="4Xf-gB-KJ6"/>
+                                        <constraint firstAttribute="trailing" secondItem="Oyl-xz-Qv2" secondAttribute="trailing" constant="15" id="6uM-n2-z5L"/>
+                                        <constraint firstItem="D8f-yh-c5r" firstAttribute="top" secondItem="V2l-7e-EJ5" secondAttribute="bottom" constant="-1" id="8kp-5D-WcR"/>
+                                        <constraint firstAttribute="trailing" secondItem="V2l-7e-EJ5" secondAttribute="trailing" constant="10" id="NBy-kD-SlR"/>
+                                        <constraint firstAttribute="trailing" secondItem="D8f-yh-c5r" secondAttribute="trailing" constant="10" id="OSh-O9-0hm"/>
+                                        <constraint firstItem="V2l-7e-EJ5" firstAttribute="leading" secondItem="bzR-hE-DV4" secondAttribute="trailing" constant="10" id="OwT-3V-NzH"/>
+                                        <constraint firstItem="v5A-GU-MVE" firstAttribute="leading" secondItem="bzR-hE-DV4" secondAttribute="trailing" constant="10" id="lnf-Qi-5wT"/>
+                                        <constraint firstItem="Oyl-xz-Qv2" firstAttribute="leading" secondItem="bzR-hE-DV4" secondAttribute="trailing" constant="8" id="mmC-sf-QSd"/>
+                                        <constraint firstItem="D8f-yh-c5r" firstAttribute="leading" secondItem="bzR-hE-DV4" secondAttribute="trailing" constant="10" id="pnr-R2-huI"/>
+                                        <constraint firstAttribute="bottom" secondItem="bzR-hE-DV4" secondAttribute="bottom" constant="10" id="qXW-Dt-n8J"/>
+                                        <constraint firstItem="V2l-7e-EJ5" firstAttribute="top" secondItem="HY9-v6-IlK" secondAttribute="top" constant="10" id="t6c-ru-zIz"/>
+                                        <constraint firstAttribute="bottom" secondItem="Oyl-xz-Qv2" secondAttribute="bottom" id="wZd-sp-lHa"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="100"/>
+                                <connections>
+                                    <outlet property="cleanerCompany" destination="D8f-yh-c5r" id="7Vc-Jr-cUu"/>
+                                    <outlet property="cleanerName" destination="V2l-7e-EJ5" id="jhL-BN-ibf"/>
+                                    <outlet property="cleanerPhoto" destination="bzR-hE-DV4" id="Vbe-MA-eRQ"/>
+                                    <outlet property="cleanerRating" destination="v5A-GU-MVE" id="v85-mj-bgL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jqX-bB-o3a" id="ein-qO-uuP"/>
+                            <outlet property="delegate" destination="jqX-bB-o3a" id="heb-7s-1DH"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Cleaners" id="kD6-qu-hRq"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w3-6X-73u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
+        </scene>
+        <!--Companies-->
+        <scene sceneID="3Fn-B8-ndZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzr-Cz-hfq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Companies" image="icons8-новая-компания-50" selectedImage="icons8-новая-компания-50" id="9XI-4t-XhE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yfJ-TU-s0E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iI2-Xa-myf" kind="relationship" relationship="rootViewController" id="BTm-Os-DbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9h-g2-Ntw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="740.625"/>
+        </scene>
+        <!--Cleaners-->
+        <scene sceneID="0w8-Ep-8H7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ztf-hi-iij" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cleaners" image="icons8-домработница-50" selectedImage="icons8-домработница-50" id="bFS-ij-5cb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6iR-ax-yvh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jqX-bB-o3a" kind="relationship" relationship="rootViewController" id="Icr-oS-qxq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhI-P5-4nT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="72.991071428571431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AuO-8E-kZj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z2L-SF-GYe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aww-1y-Lds">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jzr-Cz-hfq" kind="relationship" relationship="viewControllers" id="lUv-f8-YVv"/>
+                        <segue destination="ztf-hi-iij" kind="relationship" relationship="viewControllers" id="SrS-ca-Guc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYk-Cq-ejN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="406.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-домработница-50" width="25" height="25"/>
+        <image name="icons8-новая-компания-50" width="25" height="25"/>
+        <image name="logo" width="2458" height="2458"/>
+    </resources>
+</document>
