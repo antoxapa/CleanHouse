@@ -21,6 +21,8 @@
 		06D780F42371E377001B3717 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F32371E377001B3717 /* CompanyData.swift */; };
 		06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F52371E3E0001B3717 /* NetworkManager.swift */; };
 		06D7810223784033001B3717 /* cleaning.json in Resources */ = {isa = PBXBuildFile; fileRef = 06D7810123784033001B3717 /* cleaning.json */; };
+		06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237B238910C4004364E0 /* WorkerCell.swift */; };
+		06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237D2389562C004364E0 /* ReviewsCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		06D780F32371E377001B3717 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		06D780F52371E3E0001B3717 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		06D7810123784033001B3717 /* cleaning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cleaning.json; sourceTree = "<group>"; };
+		06F7237B238910C4004364E0 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
+		06F7237D2389562C004364E0 /* ReviewsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				06D780EF2371D518001B3717 /* CompanyInfoVC.swift */,
+				06F7237D2389562C004364E0 /* ReviewsCVC.swift */,
+				06F7237B238910C4004364E0 /* WorkerCell.swift */,
 				06D780F12371D526001B3717 /* CleanerInfoVC.swift */,
 				06D780CF2371CD0F001B3717 /* AppDelegate.swift */,
 				06D780D12371CD0F001B3717 /* SceneDelegate.swift */,
@@ -166,10 +172,12 @@
 				06D780F42371E377001B3717 /* CompanyData.swift in Sources */,
 				06D780EC2371D4D6001B3717 /* CleanerCell.swift in Sources */,
 				06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */,
+				06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */,
 				06D780EE2371D4E0001B3717 /* CompanyCell.swift in Sources */,
 				06D780E42371D471001B3717 /* CompaniesCVC.swift in Sources */,
 				06D780E62371D489001B3717 /* CleanersCVC.swift in Sources */,
 				06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */,
+				06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */,
 				06D780F22371D526001B3717 /* CleanerInfoVC.swift in Sources */,
 				06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */,
 				06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */,

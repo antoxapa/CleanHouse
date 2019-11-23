@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.tintColor = #colorLiteral(red: 0.7846526504, green: 0.5492845178, blue: 0.9580207467, alpha: 1)

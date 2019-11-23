@@ -18,7 +18,7 @@ class NetworkManager {
             print("Invalid url")
             return }
         
-        let jsonData = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let _ = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             
             do {
@@ -47,7 +47,7 @@ class NetworkManager {
     func uploadImage(url: String, sendImage: @escaping (UIImage) -> ()) {
         guard let url = URL(string: url) else { return }
         
-        let session = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        _ = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 sendImage(image)
             }
