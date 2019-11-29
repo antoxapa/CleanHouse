@@ -10,65 +10,11 @@ import UIKit
 
 class CompanyInfoVC: UIViewController {
     
-    // MARK: - CompanyView
-    @IBOutlet weak var companyLogo: UIImageView! {
-        didSet {
-            companyLogo.layer.cornerRadius = 25
-            companyLogo.layer.masksToBounds = true
-            companyLogo.layer.borderWidth = 0.25
-            companyLogo.layer.borderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        }
-    }
-    @IBOutlet weak var companyName: UILabel!
-    @IBOutlet weak var aboutCompany: UILabel!
-    @IBOutlet weak var callButton: UIButton! {
-        didSet {
-            callButton.layer.cornerRadius = 12
-            callButton.layer.masksToBounds = true
-        }
-    }
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var firstStar: UIImageView!
-    @IBOutlet weak var secondStar: UIImageView!
-    @IBOutlet weak var thirdStar: UIImageView!
-    @IBOutlet weak var fourthStar: UIImageView!
-    @IBOutlet weak var fifthStar: UIImageView!
-    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var companiesTableView: UITableView!
     
-    // MARK: - About company
-    @IBOutlet weak var aboutCompanyLabel: UILabel!
-    @IBOutlet weak var aboutCompanyTV: UITextView!
+    var namesArray = ["Anna", "Vasya","Jeka","sasha"]
+    var reviews: [String] = []
     
-    // MARK: - Rating $ Reviews
-    
-    @IBOutlet weak var ratingAndReviewsLabel: UILabel!
-    @IBOutlet weak var averageRatingLabel: UILabel!
-    @IBOutlet weak var fiveStarsProgressView: UIProgressView!
-    @IBOutlet weak var fourStarsProgressView: UIProgressView!
-    @IBOutlet weak var threeStarsProgressView: UIProgressView!
-    @IBOutlet weak var twoStarsProgressView: UIProgressView!
-    @IBOutlet weak var oneStarsProgressView: UIProgressView!
-    @IBOutlet weak var outOfFiveLabel: UILabel!
-    @IBOutlet weak var numberOfRatingsLabel: UILabel!
-    
-    // MARK: - Reviews
-    
-    @IBOutlet weak var reviewsCollectionView: UICollectionView!
-    @IBOutlet weak var tapToRateLabel: UILabel!
-    @IBOutlet weak var oneStarRatingButton: UIButton!
-    @IBOutlet weak var twoStarsRatingButton: UIButton!
-    @IBOutlet weak var threeStarsRatingButton: UIButton!
-    @IBOutlet weak var fourStarsRatingButton: UIButton!
-    @IBOutlet weak var fiveStarsRatingButton: UIButton!
-    @IBOutlet weak var writeAReviewButton: UIButton!
-    @IBOutlet weak var aboutUsButton: UIButton!
-    
-    // MARK: - Our workers
-    
-    @IBOutlet weak var ourWorkersLabel: UILabel!
-    @IBOutlet weak var workersCV: UICollectionView!
-
-    @IBOutlet weak var scrollView: UIScrollView!
     
     private var gradient: CAGradientLayer! {
         didSet {
@@ -79,13 +25,13 @@ class CompanyInfoVC: UIViewController {
             gradient.colors = [startColor, endColor]
         }
     }
-   
-
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -95,37 +41,41 @@ class CompanyInfoVC: UIViewController {
         gradient = CAGradientLayer()
         gradient.frame.size = view.frame.size
         gradientBackgroundView.layer.addSublayer(gradient)
-        view.insertSubview(gradientBackgroundView, belowSubview: scrollView)
+        view.insertSubview(gradientBackgroundView, belowSubview: companiesTableView)
     }
 }
 
-extension CompanyInfoVC: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == workersCV {
-            return 3
+extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "companyViewCell", for: indexPath)
+        } else if indexPath.row == 1 {
+            return tableView.dequeueReusableCell(withIdentifier: "aboutCompanyCell", for: indexPath)
+        } else if indexPath.row == 2  {
+            return tableView.dequeueReusableCell(withIdentifier: "ratingCell", for: indexPath)
+        } else if indexPath.row == 3  {
+            return tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath)
         } else {
-        return 3
+            return tableView.dequeueReusableCell(withIdentifier: "workersCell", for: indexPath)
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == workersCV {
-        guard let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "workerCell", for: indexPath) as? WorkerCell else { return UICollectionViewCell() }
-            return cellA
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 190
+        } else if indexPath.row == 1 {
+            return 200
+        } else if indexPath.row == 2  {
+            return 120
+        } else if indexPath.row == 3  {
+            return 300
         } else {
-        guard let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCell", for: indexPath) as? ReviewsCVC else { return UICollectionViewCell() }
-            return cellB
-        }
-    }
-    
-}
-extension CompanyInfoVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == workersCV {
-            let height = collectionView.frame.height - 20
-            return CGSize(width: height, height: height)
-        } else {
-            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+            return 300
         }
     }
 }
+

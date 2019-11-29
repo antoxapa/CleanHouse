@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */; };
+		063C0CDB2391428000D1FC5E /* AboutCompanyTVCl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */; };
+		063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDC2391429500D1FC5E /* RatingTVC.swift */; };
+		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
+		063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CE0239142D000D1FC5E /* WorkersTVC.swift */; };
 		06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780CF2371CD0F001B3717 /* AppDelegate.swift */; };
 		06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780D12371CD0F001B3717 /* SceneDelegate.swift */; };
 		06D780D72371CD0F001B3717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D780D52371CD0F001B3717 /* Main.storyboard */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewTVC.swift; sourceTree = "<group>"; };
+		063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVCl.swift; sourceTree = "<group>"; };
+		063C0CDC2391429500D1FC5E /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
+		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
+		063C0CE0239142D000D1FC5E /* WorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersTVC.swift; sourceTree = "<group>"; };
 		06D780CC2371CD0F001B3717 /* CleanHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D780CF2371CD0F001B3717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D780D12371CD0F001B3717 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +70,11 @@
 		06D780C32371CD0F001B3717 = {
 			isa = PBXGroup;
 			children = (
+				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
+				063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */,
+				063C0CDC2391429500D1FC5E /* RatingTVC.swift */,
+				063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */,
+				063C0CE0239142D000D1FC5E /* WorkersTVC.swift */,
 				06D780CE2371CD0F001B3717 /* CleanHouse */,
 				06D780CD2371CD0F001B3717 /* Products */,
 			);
@@ -169,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */,
 				06D780F42371E377001B3717 /* CompanyData.swift in Sources */,
 				06D780EC2371D4D6001B3717 /* CleanerCell.swift in Sources */,
 				06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */,
@@ -177,8 +193,12 @@
 				06D780E42371D471001B3717 /* CompaniesCVC.swift in Sources */,
 				06D780E62371D489001B3717 /* CleanersCVC.swift in Sources */,
 				06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */,
+				063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */,
 				06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */,
 				06D780F22371D526001B3717 /* CleanerInfoVC.swift in Sources */,
+				063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */,
+				063C0CDB2391428000D1FC5E /* AboutCompanyTVCl.swift in Sources */,
+				063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */,
 				06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */,
 				06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */,
 			);
