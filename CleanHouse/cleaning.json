@@ -8,6 +8,7 @@
         "company": {
             "name": "Tidy Tom's",
             "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+            "companyRating": "0.5",
         }
     },
     {
@@ -19,6 +20,7 @@
         "company": {
             "name": "Tide cleaners",
             "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
+            "companyRating": "1.4",
         }
     },
     {
@@ -30,6 +32,7 @@
         "company": {
             "name": "Bubble Shine",
             "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
+            "companyRating": "1.5",
         }
     },
     {
@@ -41,6 +44,7 @@
         "company": {
             "name": "Hobort cleaners",
             "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
+            "companyRating": "2.4",
         }
     },
     {
@@ -52,6 +56,7 @@
         "company": {
             "name": "Wilmington cleaners",
             "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
+            "companyRating": "2.5",
         }
     },
     {
@@ -63,7 +68,7 @@
         "company": {
             "name": "Royal FineCleaners",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMXK3ykqQ2uzd92S_PSELc3MjkzNMhDkrzDbqmEaNpvzcxXvmlQ&s",
-            
+            "companyRating": "3.4",
         }
     },
     {
@@ -75,6 +80,7 @@
         "company": {
             "name": "Press",
             "logo": "",
+            "companyRating": "3.5",
         }
     },
     {
@@ -86,6 +92,7 @@
         "company": {
             "name": "Impressive cleaners",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXnRdgAn3yB47mUE4rA8C5qQBO800r2LWbwMG2tUvo9lweB9N&s",
+            "companyRating": "4.2",
         }
     },
     {
@@ -93,10 +100,11 @@
         "rating": "3.3",
         "phone": "+375293553525",
         "email": "dariakojuh@gmail.com",
-        "photo": "",
+        "photo": "jjj",
         "company": {
             "name": "Greenwash",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPD_XtnFCiEz2cojpngT11Vk8FdvyKf6D1X0y7Zg6hIUCMOHgisQ&s",
+            "companyRating": "4.5",
         }
     },
     {
@@ -108,6 +116,7 @@
         "company": {
             "name": "DRY cleaners",
             "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
+            "companyRating": "5",
         }
     }
 ]

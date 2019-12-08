@@ -52,7 +52,7 @@ class CleanersCVC: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cleanerCell", for: indexPath) as? CleanerCell else { return UICollectionViewCell()}
         let cleaners = cleanersData[indexPath.row]
         cell.cleanerName.text = cleaners.name
-        cell.cleanerRating.text = "Rating: \((cleaners.rating)!) / 5"
+        cell.cleanerRating.text = "Rating: \((cleaners.rating)) / 5"
         cell.cleanerCompany.text = cleaners.company.name
         
         DispatchQueue.global().async {

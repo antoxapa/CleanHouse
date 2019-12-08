@@ -20,7 +20,6 @@ class NetworkManager {
         
         let _ = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
-            
             do {
                 let company = try JSONDecoder().decode([CompanyData].self, from: data)
                 complitionHandler(company)
@@ -51,7 +50,6 @@ class NetworkManager {
             if let data = data, let image = UIImage(data: data) {
                 sendImage(image)
             }
-            
         }.resume()
     }
 }

@@ -15,6 +15,10 @@ class WorkerCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super .awakeFromNib()
+        makeRoundCorners()
+    }
+    
+    private func makeRoundCorners() {
         self.layer.cornerRadius = 15
         self.layer.masksToBounds = true
         self.layer.borderWidth = 0.3

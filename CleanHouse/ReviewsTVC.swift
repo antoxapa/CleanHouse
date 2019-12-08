@@ -51,6 +51,6 @@ extension ReviewsTVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension ReviewsTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width - 40, height: collectionView.frame.height)
     }
 }

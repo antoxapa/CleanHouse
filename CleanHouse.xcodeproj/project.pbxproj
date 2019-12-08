@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */; };
-		063C0CDB2391428000D1FC5E /* AboutCompanyTVCl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */; };
+		063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */; };
 		063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDC2391429500D1FC5E /* RatingTVC.swift */; };
 		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
 		063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CE0239142D000D1FC5E /* WorkersTVC.swift */; };
@@ -22,7 +22,6 @@
 		06D780EC2371D4D6001B3717 /* CleanerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780EB2371D4D6001B3717 /* CleanerCell.swift */; };
 		06D780EE2371D4E0001B3717 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780ED2371D4E0001B3717 /* CompanyCell.swift */; };
 		06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780EF2371D518001B3717 /* CompanyInfoVC.swift */; };
-		06D780F22371D526001B3717 /* CleanerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F12371D526001B3717 /* CleanerInfoVC.swift */; };
 		06D780F42371E377001B3717 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F32371E377001B3717 /* CompanyData.swift */; };
 		06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F52371E3E0001B3717 /* NetworkManager.swift */; };
 		06D7810223784033001B3717 /* cleaning.json in Resources */ = {isa = PBXBuildFile; fileRef = 06D7810123784033001B3717 /* cleaning.json */; };
@@ -32,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewTVC.swift; sourceTree = "<group>"; };
-		063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVCl.swift; sourceTree = "<group>"; };
+		063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVC.swift; sourceTree = "<group>"; };
 		063C0CDC2391429500D1FC5E /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
 		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
 		063C0CE0239142D000D1FC5E /* WorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersTVC.swift; sourceTree = "<group>"; };
@@ -47,8 +46,7 @@
 		06D780E52371D489001B3717 /* CleanersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanersCVC.swift; sourceTree = "<group>"; };
 		06D780EB2371D4D6001B3717 /* CleanerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanerCell.swift; sourceTree = "<group>"; };
 		06D780ED2371D4E0001B3717 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
-		06D780EF2371D518001B3717 /* CompanyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoVC.swift; sourceTree = "<group>"; };
-		06D780F12371D526001B3717 /* CleanerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanerInfoVC.swift; sourceTree = "<group>"; };
+		06D780EF2371D518001B3717 /* CompanyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		06D780F32371E377001B3717 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		06D780F52371E3E0001B3717 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		06D7810123784033001B3717 /* cleaning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cleaning.json; sourceTree = "<group>"; };
@@ -70,11 +68,6 @@
 		06D780C32371CD0F001B3717 = {
 			isa = PBXGroup;
 			children = (
-				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
-				063C0CDA2391428000D1FC5E /* AboutCompanyTVCl.swift */,
-				063C0CDC2391429500D1FC5E /* RatingTVC.swift */,
-				063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */,
-				063C0CE0239142D000D1FC5E /* WorkersTVC.swift */,
 				06D780CE2371CD0F001B3717 /* CleanHouse */,
 				06D780CD2371CD0F001B3717 /* Products */,
 			);
@@ -91,18 +84,12 @@
 		06D780CE2371CD0F001B3717 /* CleanHouse */ = {
 			isa = PBXGroup;
 			children = (
-				06D780EF2371D518001B3717 /* CompanyInfoVC.swift */,
-				06F7237D2389562C004364E0 /* ReviewsCVC.swift */,
-				06F7237B238910C4004364E0 /* WorkerCell.swift */,
-				06D780F12371D526001B3717 /* CleanerInfoVC.swift */,
+				06F3E1CC239CE41600A73084 /* Model */,
+				06F3E1CB239CE3A600A73084 /* Controllers */,
+				06F3E1C9239CE34E00A73084 /* TableViewCells */,
 				06D780CF2371CD0F001B3717 /* AppDelegate.swift */,
 				06D780D12371CD0F001B3717 /* SceneDelegate.swift */,
 				06D780D52371CD0F001B3717 /* Main.storyboard */,
-				06D780E32371D471001B3717 /* CompaniesCVC.swift */,
-				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
-				06D780E52371D489001B3717 /* CleanersCVC.swift */,
-				06D780EB2371D4D6001B3717 /* CleanerCell.swift */,
-				06D780F32371E377001B3717 /* CompanyData.swift */,
 				06D780F52371E3E0001B3717 /* NetworkManager.swift */,
 				06D780D82371CD0F001B3717 /* Assets.xcassets */,
 				06D780DA2371CD0F001B3717 /* LaunchScreen.storyboard */,
@@ -110,6 +97,40 @@
 				06D780DD2371CD0F001B3717 /* Info.plist */,
 			);
 			path = CleanHouse;
+			sourceTree = "<group>";
+		};
+		06F3E1C9239CE34E00A73084 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
+				063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */,
+				063C0CDC2391429500D1FC5E /* RatingTVC.swift */,
+				063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */,
+				06F7237D2389562C004364E0 /* ReviewsCVC.swift */,
+				063C0CE0239142D000D1FC5E /* WorkersTVC.swift */,
+				06F7237B238910C4004364E0 /* WorkerCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		06F3E1CB239CE3A600A73084 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06D780E52371D489001B3717 /* CleanersCVC.swift */,
+				06D780EB2371D4D6001B3717 /* CleanerCell.swift */,
+				06D780E32371D471001B3717 /* CompaniesCVC.swift */,
+				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
+				06D780EF2371D518001B3717 /* CompanyInfoVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		06F3E1CC239CE41600A73084 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06D780F32371E377001B3717 /* CompanyData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +216,8 @@
 				06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */,
 				063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */,
 				06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */,
-				06D780F22371D526001B3717 /* CleanerInfoVC.swift in Sources */,
 				063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */,
-				063C0CDB2391428000D1FC5E /* AboutCompanyTVCl.swift in Sources */,
+				063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */,
 				063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */,
 				06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */,
 				06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */,

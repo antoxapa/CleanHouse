@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class CompaniesCVC: UICollectionViewController {
     
     private let reuseIdentifier = "companyCell"
@@ -25,6 +23,9 @@ class CompaniesCVC: UICollectionViewController {
     }
     let networkManager = NetworkManager()
     var companyArray: [CompanyData] = [CompanyData]()
+    var selectedIndexPath: Int!
+    var companyLogoArray: [UIImage] = [UIImage]()
+    
     override func viewDidAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
@@ -43,19 +44,21 @@ class CompaniesCVC: UICollectionViewController {
         collectionView.backgroundView?.layer.addSublayer(gradient)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCompanySegue"  {
+            if let indexPath = collectionView.indexPathsForSelectedItems!.last {
+                guard let dvc = segue.destination as? CompanyInfoVC else { return }
+                dvc.currentIndex = indexPath.row
+            }
+        }
+    }
+    
     // MARK: UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return companyArray.count
     }
     
@@ -66,7 +69,7 @@ class CompaniesCVC: UICollectionViewController {
             DispatchQueue.main.async {
                 cell.companyLogo.image = image
             }
-        }
+    }
         cell.companyName.text = companys.company.name
         cell.companyPhoneNumber.text = companys.phone
         return cell

@@ -18,7 +18,6 @@ class WorkersTVC: UITableViewCell {
         super.awakeFromNib()
         workerCollectionView.delegate = self
         workerCollectionView.dataSource = self
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,7 +42,9 @@ extension WorkersTVC: UICollectionViewDataSource, UICollectionViewDelegate {
 
 extension WorkersTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        return CGSize(width: collectionView.frame.width, height: 190)
+        return CGSize(width: 260, height: collectionView.frame.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }
