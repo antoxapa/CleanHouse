@@ -9,6 +9,7 @@
             "name": "Tidy Tom's",
             "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
             "companyRating": "0.5",
+            "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
         }
     },
     {
@@ -21,6 +22,7 @@
             "name": "Tide cleaners",
             "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
             "companyRating": "1.4",
+            "about": "Our main wish is to clean up the client, so we make a complete set of work and a little more.",
         }
     },
     {
@@ -33,6 +35,7 @@
             "name": "Bubble Shine",
             "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
             "companyRating": "1.5",
+            "about": "Long text",
         }
     },
     {
@@ -45,6 +48,7 @@
             "name": "Hobort cleaners",
             "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
             "companyRating": "2.4",
+            "about": "Long text",
         }
     },
     {
@@ -57,6 +61,7 @@
             "name": "Wilmington cleaners",
             "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
             "companyRating": "2.5",
+            "about": "Long text",
         }
     },
     {
@@ -69,6 +74,7 @@
             "name": "Royal FineCleaners",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMXK3ykqQ2uzd92S_PSELc3MjkzNMhDkrzDbqmEaNpvzcxXvmlQ&s",
             "companyRating": "3.4",
+            "about": "Long text",
         }
     },
     {
@@ -81,6 +87,7 @@
             "name": "Press",
             "logo": "",
             "companyRating": "3.5",
+            "about": "Long text",
         }
     },
     {
@@ -93,6 +100,7 @@
             "name": "Impressive cleaners",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXnRdgAn3yB47mUE4rA8C5qQBO800r2LWbwMG2tUvo9lweB9N&s",
             "companyRating": "4.2",
+            "about": "Long text",
         }
     },
     {
@@ -105,6 +113,7 @@
             "name": "Greenwash",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPD_XtnFCiEz2cojpngT11Vk8FdvyKf6D1X0y7Zg6hIUCMOHgisQ&s",
             "companyRating": "4.5",
+            "about": "Long text",
         }
     },
     {
@@ -117,6 +126,7 @@
             "name": "DRY cleaners",
             "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
             "companyRating": "5",
+            "about": "Long text",
         }
     }
 ]

@@ -11,19 +11,23 @@ import UIKit
 class AboutCompanyTVC: UITableViewCell {
     
     // MARK: - About company
-       @IBOutlet weak var aboutCompanyLabel: UILabel!
-       @IBOutlet weak var aboutCompanyTV: UITextView!
+    @IBOutlet weak var aboutCompanyLabel: UILabel!
+    @IBOutlet weak var aboutCompanyTV: UITextView!
+    @IBOutlet weak var moreButton: UIButton! {
+        didSet {
+            moreButton.layer.shadowOffset = CGSize(width: -7, height: 0)
+            moreButton.layer.shadowColor = #colorLiteral(red: 0.9073960185, green: 0.9424270391, blue: 0.9372811913, alpha: 1).cgColor
+            moreButton.layer.shadowOpacity = 1
+        }
+    }
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

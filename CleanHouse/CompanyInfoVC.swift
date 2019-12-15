@@ -15,6 +15,9 @@ class CompanyInfoVC: UIViewController {
     var companyArray: [CompanyData] = [CompanyData]()
     var networkManager = NetworkManager()
     var currentIndex = 0
+    var topArray = [Double]()
+    var url: String?
+    var selectedIndex: IndexPath?
     
     private var gradient: CAGradientLayer! {
         didSet {
@@ -30,6 +33,10 @@ class CompanyInfoVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        companiesTableView.estimatedRowHeight = 44
+        companiesTableView.rowHeight = UITableView.automaticDimension
+        
+        
         
         networkManager.fetchOfflineData { (companies) in
             self.companyArray = companies
@@ -61,27 +68,49 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
             }
             cellA.companyName.text = companys.company.name
             cellA.aboutCompany.text = companys.phone
+            cellA.topLabel.text = String(currentIndex + 1)
             cellA.ratingLabel.text = String(companys.company.companyRating!)
+            cellA.selectionStyle = .none
             
-            if companys.company.companyRating! <= "1.4" {
-                cellA.firstStar.image = UIImage(named: "star.fill")
-            }
-            if companys.company.companyRating! <= "2.4" {
-                cellA.firstStar.image = UIImage(named: "star.fill")
-                cellA.secondStar.image = UIImage(named: "star.fill")
-            }
-            if companys.company.companyRating! <= "3.4" {
+            let rating = Double(companys.company.companyRating!)!
+            
+            
+            switch rating {
+            case 0...0.5:
+                cellA.firstStar.image = UIImage(systemName: "star.lefthalf.fill")
+            case 0.6...1.0:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+            case 1.1...1.5:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+                cellA.secondStar.image = UIImage(systemName: "star.lefthalf.fill")
+            case 1.6...2.0:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+                cellA.secondStar.image = UIImage(systemName: "star.fill")
+            case 2.1...2.5:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+                cellA.secondStar.image = UIImage(systemName: "star.fill")
+                cellA.thirdStar.image = UIImage(systemName: "star.lefthalf.fill")
+            case 2.6...3.0:
                 cellA.firstStar.image = UIImage(systemName: "star.fill")
                 cellA.secondStar.image = UIImage(systemName: "star.fill")
                 cellA.thirdStar.image = UIImage(systemName: "star.fill")
-            }
-            if companys.company.companyRating! <= "4.4" {
+            case 3.1...3.5:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+                cellA.secondStar.image = UIImage(systemName: "star.fill")
+                cellA.thirdStar.image = UIImage(systemName: "star.fill")
+                cellA.fourthStar.image = UIImage(systemName: "star.lefthalf.fill")
+            case 3.6...4.0:
                 cellA.firstStar.image = UIImage(systemName: "star.fill")
                 cellA.secondStar.image = UIImage(systemName: "star.fill")
                 cellA.thirdStar.image = UIImage(systemName: "star.fill")
                 cellA.fourthStar.image = UIImage(systemName: "star.fill")
-            }
-            if companys.company.companyRating! <= "5" {
+            case 4.1...4.5:
+                cellA.firstStar.image = UIImage(systemName: "star.fill")
+                cellA.secondStar.image = UIImage(systemName: "star.fill")
+                cellA.thirdStar.image = UIImage(systemName: "star.fill")
+                cellA.fourthStar.image = UIImage(systemName: "star.fill")
+                cellA.fifthStar.image = UIImage(systemName: "star.lefthalf.fill")
+            default:
                 cellA.firstStar.image = UIImage(systemName: "star.fill")
                 cellA.secondStar.image = UIImage(systemName: "star.fill")
                 cellA.thirdStar.image = UIImage(systemName: "star.fill")
@@ -90,32 +119,60 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
             }
             return cellA
         } else if indexPath.row == 1 {
+            
             guard let cellB = tableView.dequeueReusableCell(withIdentifier: "aboutCompanyCell") as? AboutCompanyTVC else { return UITableViewCell() }
+            cellB.aboutCompanyTV.text = companyArray[currentIndex].company.about
+            
+            cellB.selectionStyle = .none
+            if cellB.aboutCompanyTV.contentSize.height > 120 {
+                cellB.moreButton.isHidden = false
+            }
+            if selectedIndex == indexPath {
+                cellB.moreButton.isHidden = true
+            }
             return cellB
         } else if indexPath.row == 2  {
             guard let cellC = tableView.dequeueReusableCell(withIdentifier: "ratingCell") as? RatingTVC else { return UITableViewCell() }
+           cellC.selectionStyle = .none
             return cellC
         } else if indexPath.row == 3  {
             guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }
+           cellD.selectionStyle = .none
             return cellD
         } else {
             guard let cellE = tableView.dequeueReusableCell(withIdentifier: "workersCell") as? WorkersTVC else { return UITableViewCell() }
+            cellE.workersNamesArray.append(companyArray[currentIndex].name)
+            networkManager.uploadImage(url: companyArray[currentIndex].photo!) { (image) in
+                cellE.workersImagesArray.append(image)
+            }
+            cellE.selectionStyle = .none
             return cellE
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 190
+             return 190
         } else if indexPath.row == 1 {
-            return 200
-        } else if indexPath.row == 2  {
+            if selectedIndex == indexPath{
+                return UITableView.automaticDimension
+            }
             return 120
-        } else if indexPath.row == 3  {
-            return 300
+        } else if indexPath.row == 2 {
+            return 120
         } else {
             return 300
         }
-    }
 }
-
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.row == 1 {
+        self.selectedIndex = indexPath
+        tableView.reloadData()
+            return indexPath
+        }
+        return nil
+    }
+//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.selectionStyle = .none
+//    }
+}

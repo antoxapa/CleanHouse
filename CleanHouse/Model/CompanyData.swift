@@ -20,4 +20,5 @@ public struct Company: Decodable {
     let name: String
     let logo: String?
     let companyRating: String?
+    let about: String
 }

@@ -11,8 +11,9 @@ import UIKit
 class WorkersTVC: UITableViewCell {
 
     @IBOutlet weak var ourWorkersLabel: UILabel!
-    
     @IBOutlet weak var workerCollectionView: UICollectionView!
+    var workersNamesArray = [String]()
+    var workersImagesArray = [UIImage]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +30,18 @@ class WorkersTVC: UITableViewCell {
 }
 extension WorkersTVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return workersNamesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "workersCell", for: indexPath) as? WorkerCell else {
             return UICollectionViewCell()
+        }
+        cell.workerName.text = workersNamesArray[indexPath.row]
+        if workersImagesArray.count > indexPath.row  {
+            DispatchQueue.main.async {
+                cell.workerImage.image = self.workersImagesArray[indexPath.row]
+            }
         }
         return cell
     }
