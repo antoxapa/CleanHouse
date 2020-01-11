@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class ReviewsCVC: UICollectionViewCell {
     
@@ -14,11 +15,7 @@ class ReviewsCVC: UICollectionViewCell {
     @IBOutlet weak var reviewText: UITextView!
     @IBOutlet weak var reviewAuthor: UILabel!
     @IBOutlet weak var reviewDate: UILabel!
-    @IBOutlet weak var oneStarReviewRating: UIImageView!
-    @IBOutlet weak var twoStarsReviewRating: UIImageView!
-    @IBOutlet weak var threeStarsReviewRating: UIImageView!
-    @IBOutlet weak var fourStarsReviewRating: UIImageView!
-    @IBOutlet weak var fiveStarsReviewRating: UIImageView!
+    @IBOutlet weak var reviewRating: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

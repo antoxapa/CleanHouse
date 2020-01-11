@@ -1,0 +1,6 @@
+framework module Pods_CleanHouse {
+  umbrella header "Pods-CleanHouse-umbrella.h"
+
+  export *
+  module * { export * }
+}

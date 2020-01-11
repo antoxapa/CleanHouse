@@ -7,33 +7,40 @@
 //
 
 import UIKit
+import Cosmos
 
 class ReviewsTVC: UITableViewCell {
     
     // MARK: - Reviews
-       
-       @IBOutlet weak var reviewsCollectionView: UICollectionView!
-       @IBOutlet weak var tapToRateLabel: UILabel!
-       @IBOutlet weak var oneStarRatingButton: UIButton!
-       @IBOutlet weak var twoStarsRatingButton: UIButton!
-       @IBOutlet weak var threeStarsRatingButton: UIButton!
-       @IBOutlet weak var fourStarsRatingButton: UIButton!
-       @IBOutlet weak var fiveStarsRatingButton: UIButton!
-       @IBOutlet weak var writeAReviewButton: UIButton!
-       @IBOutlet weak var aboutUsButton: UIButton!
-
+    
+    @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var tapToRateLabel: UILabel!
+    @IBOutlet weak var oneStarRatingButton: UIButton!
+    @IBOutlet weak var twoStarsRatingButton: UIButton!
+    @IBOutlet weak var threeStarsRatingButton: UIButton!
+    @IBOutlet weak var fourStarsRatingButton: UIButton!
+    @IBOutlet weak var fiveStarsRatingButton: UIButton!
+    @IBOutlet weak var writeAReviewButton: UIButton!
+    @IBOutlet weak var aboutUsButton: UIButton!
+    @IBOutlet weak var cosmosRating: CosmosView!
+    
+    var userRating: Double = 0.0
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         reviewsCollectionView.delegate = self
         reviewsCollectionView.dataSource = self
+        setRating()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    private func setRating()  {
+        userRating = cosmosRating.rating
+    }
 }
 
 extension ReviewsTVC: UICollectionViewDelegate, UICollectionViewDataSource {

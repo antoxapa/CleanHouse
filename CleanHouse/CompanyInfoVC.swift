@@ -18,6 +18,7 @@ class CompanyInfoVC: UIViewController {
     var topArray = [Double]()
     var url: String?
     var selectedIndex: IndexPath?
+    var rating: Double?
     
     private var gradient: CAGradientLayer! {
         didSet {
@@ -31,12 +32,11 @@ class CompanyInfoVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         companiesTableView.estimatedRowHeight = 44
         companiesTableView.rowHeight = UITableView.automaticDimension
-        
-        
         
         networkManager.fetchOfflineData { (companies) in
             self.companyArray = companies
@@ -69,54 +69,11 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
             cellA.companyName.text = companys.company.name
             cellA.aboutCompany.text = companys.phone
             cellA.topLabel.text = String(currentIndex + 1)
-            cellA.ratingLabel.text = String(companys.company.companyRating!)
+            if let rating = companys.company.companyRating {
+            cellA.setupRating(rating: rating)
+            }
             cellA.selectionStyle = .none
             
-            let rating = Double(companys.company.companyRating!)!
-            
-            
-            switch rating {
-            case 0...0.5:
-                cellA.firstStar.image = UIImage(systemName: "star.lefthalf.fill")
-            case 0.6...1.0:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-            case 1.1...1.5:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.lefthalf.fill")
-            case 1.6...2.0:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-            case 2.1...2.5:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.lefthalf.fill")
-            case 2.6...3.0:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.fill")
-            case 3.1...3.5:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.fill")
-                cellA.fourthStar.image = UIImage(systemName: "star.lefthalf.fill")
-            case 3.6...4.0:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.fill")
-                cellA.fourthStar.image = UIImage(systemName: "star.fill")
-            case 4.1...4.5:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.fill")
-                cellA.fourthStar.image = UIImage(systemName: "star.fill")
-                cellA.fifthStar.image = UIImage(systemName: "star.lefthalf.fill")
-            default:
-                cellA.firstStar.image = UIImage(systemName: "star.fill")
-                cellA.secondStar.image = UIImage(systemName: "star.fill")
-                cellA.thirdStar.image = UIImage(systemName: "star.fill")
-                cellA.fourthStar.image = UIImage(systemName: "star.fill")
-                cellA.fifthStar.image = UIImage(systemName: "star.fill")
-            }
             return cellA
         } else if indexPath.row == 1 {
             
@@ -138,6 +95,7 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 3  {
             guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }
            cellD.selectionStyle = .none
+            rating = cellD.userRating
             return cellD
         } else {
             guard let cellE = tableView.dequeueReusableCell(withIdentifier: "workersCell") as? WorkersTVC else { return UITableViewCell() }
