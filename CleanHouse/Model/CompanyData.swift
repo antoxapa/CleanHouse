@@ -14,11 +14,13 @@ public struct CompanyData: Decodable {
     let phone : String
     let company : Company
     let photo: String?
+    let userRating: String?
 }
 
 public struct Company: Decodable {
     let name: String
     let logo: String?
     let companyRating: String?
+    let ratingsCount: String?
     let about: String
 }

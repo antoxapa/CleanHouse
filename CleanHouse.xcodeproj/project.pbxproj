@@ -114,6 +114,7 @@
 		06F3E1C9239CE34E00A73084 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
 				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
 				063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */,
 				063C0CDC2391429500D1FC5E /* RatingTVC.swift */,
@@ -131,7 +132,6 @@
 				06D780E52371D489001B3717 /* CleanersCVC.swift */,
 				06D780EB2371D4D6001B3717 /* CleanerCell.swift */,
 				06D780E32371D471001B3717 /* CompaniesCVC.swift */,
-				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
 				06D780EF2371D518001B3717 /* CompanyInfoVC.swift */,
 			);
 			name = Controllers;

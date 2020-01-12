@@ -44,10 +44,7 @@ class CompanyViewTVC: UITableViewCell {
     }
     
     func setupRating(rating: String) {
-        mainRatingView.rating = Double(rating)!
-        mainRatingLabel.text = rating
-       }
-    
-    
-    
+    mainRatingView.rating = Double(rating)!
+    mainRatingLabel.text = rating
+    }
 }

@@ -14,14 +14,18 @@ class CompanyRealm: Object{
     @objc dynamic var companyLogo: String?
     @objc dynamic var companyRating: String?
     @objc dynamic var aboutCompany: String?
+    @objc dynamic var userRating: String?
+    @objc dynamic var ratingCount: String?
 
-    convenience init(companyName: String, companyDescription: String?, companyLogo: String?, companyRating: String?, aboutCompany: String?) {
+    convenience init(companyName: String, companyDescription: String?, companyLogo: String?, companyRating: String?, aboutCompany: String?, userRating: String?, ratingCount: String?) {
         self.init()
         self.companyName = companyName
         self.companyDescription = companyDescription
         self.companyLogo = companyLogo
         self.companyRating = companyRating
         self.aboutCompany = aboutCompany
+        self.userRating = userRating
+        self.ratingCount = ratingCount
     }
 }
 

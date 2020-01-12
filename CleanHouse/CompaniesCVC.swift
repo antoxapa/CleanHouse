@@ -42,7 +42,7 @@ class CompaniesCVC: UICollectionViewController {
                 StorageManager.deleteAll()
                 
                 for company in companies {
-                    let company = CompanyRealm(companyName: company.company.name, companyDescription: nil, companyLogo: company.company.logo, companyRating: company.company.companyRating, aboutCompany: company.company.about)
+                    let company = CompanyRealm(companyName: company.company.name, companyDescription: nil, companyLogo: company.company.logo, companyRating: company.company.companyRating, aboutCompany: company.company.about, userRating: company.userRating, ratingCount: company.company.ratingsCount)
                     StorageManager.saveObject(company)
                 }
             }
@@ -64,7 +64,7 @@ class CompaniesCVC: UICollectionViewController {
         if segue.identifier == "showCompanySegue"  {
             if let indexPath = collectionView.indexPathsForSelectedItems!.last {
                 guard let dvc = segue.destination as? CompanyInfoVC else { return }
-                dvc.currentIndex = indexPath.row
+                dvc.company = companyRealm[indexPath.row]
             }
         }
     }

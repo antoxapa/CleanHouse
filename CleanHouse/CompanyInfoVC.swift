@@ -13,14 +13,13 @@ class CompanyInfoVC: UIViewController {
     
     @IBOutlet weak var companiesTableView: UITableView!
     
-    var companyArray: [CompanyData] = [CompanyData]()
-    var companyRealm: Results<CompanyRealm>!
-    var networkManager = NetworkManager()
-    var currentIndex = 0
+    var company: CompanyRealm?
+    
     var topArray = [Double]()
     var url: String?
     var selectedIndex: IndexPath?
     var rating: Double?
+    var count: Double = 0.0
     
     private var gradient: CAGradientLayer! {
         didSet {
@@ -33,18 +32,13 @@ class CompanyInfoVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         addBackgroundGradient()
+        companiesTableView.estimatedRowHeight = 44
+        companiesTableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        companyRealm = realm.objects(CompanyRealm.self)
         
-        companiesTableView.estimatedRowHeight = 44
-        companiesTableView.rowHeight = UITableView.automaticDimension
-        
-        networkManager.fetchOfflineData { (companies) in
-            self.companyArray = companies
-        }
     }
     private func addBackgroundGradient() {
         let gradientBackgroundView = UIView()
@@ -64,27 +58,23 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cellA = tableView.dequeueReusableCell(withIdentifier: "companyViewCell") as? CompanyViewTVC else { return UITableViewCell() }
-            let companys = companyArray[currentIndex]
-            networkManager.uploadImage(url: companys.company.logo!) { (image) in
-                DispatchQueue.main.async {
-                    cellA.companyLogo.image = image
-                }
-            }
-            cellA.companyName.text = companys.company.name
-            cellA.aboutCompany.text = companys.phone
-            cellA.topLabel.text = String(currentIndex + 1)
-            if let rating = companys.company.companyRating {
-            cellA.setupRating(rating: rating)
-            }
-            cellA.selectionStyle = .none
             
+            cellA.companyName.text = company?.companyName
+            cellA.aboutCompany.text = company?.companyDescription
+            //            cellA.topLabel.text = String(currentIndex + 1)
+            if company?.companyRating != nil, company?.ratingCount != nil {
+                let sumRating = Double(company!.companyRating!)!
+                print(sumRating)
+                count = Double(company!.ratingCount!)!
+                print(count)
+                let avarageRating = String(sumRating / count)
+                cellA.setupRating(rating: avarageRating)
+            }
             return cellA
         } else if indexPath.row == 1 {
             
             guard let cellB = tableView.dequeueReusableCell(withIdentifier: "aboutCompanyCell") as? AboutCompanyTVC else { return UITableViewCell() }
-            cellB.aboutCompanyTV.text = companyArray[currentIndex].company.about
-            
-            cellB.selectionStyle = .none
+            cellB.aboutCompanyTV.text = company?.aboutCompany
             if cellB.aboutCompanyTV.contentSize.height > 120 {
                 cellB.moreButton.isHidden = false
             }
@@ -94,27 +84,51 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
             return cellB
         } else if indexPath.row == 2  {
             guard let cellC = tableView.dequeueReusableCell(withIdentifier: "ratingCell") as? RatingTVC else { return UITableViewCell() }
-           cellC.selectionStyle = .none
             return cellC
         } else if indexPath.row == 3  {
             guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }
-           cellD.selectionStyle = .none
-            rating = cellD.userRating
+            if company?.userRating != nil, let stringRating = company?.userRating {
+                rating = Double(stringRating)
+                cellD.cosmosRating.rating = rating!
+                cellD.cosmosRating.settings.updateOnTouch = false
+            } else {
+                cellD.cosmosRating.didFinishTouchingCosmos = { rating in
+                    if self.rating == nil {
+                        self.rating = rating
+                        self.count += 1
+                        var newRating: Double?
+                        
+                        if self.company?.companyRating != nil {
+                        var oldRating = Double(self.company!.companyRating!)
+                        newRating = oldRating! + rating
+                        } else {
+                        newRating = rating
+                        }
+                        try! realm.write {
+                            self.company?.userRating = String(self.rating!)
+                            self.company?.companyRating = String(newRating!)
+                            self.company?.ratingCount = String(self.count)
+                        }
+                    }
+                    tableView.reloadData()
+                }
+            }
             return cellD
+            
         } else {
             guard let cellE = tableView.dequeueReusableCell(withIdentifier: "workersCell") as? WorkersTVC else { return UITableViewCell() }
-            cellE.workersNamesArray.append(companyArray[currentIndex].name)
-            networkManager.uploadImage(url: companyArray[currentIndex].photo!) { (image) in
-                cellE.workersImagesArray.append(image)
-            }
-            cellE.selectionStyle = .none
+            //            cellE.workersNamesArray.append(companyArray[currentIndex].name)
+            //            networkManager.uploadImage(url: companyArray[currentIndex].photo!) { (image) in
+            //                cellE.workersImagesArray.append(image)
+            //            }
             return cellE
         }
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-             return 190
+            return 190
         } else if indexPath.row == 1 {
             if selectedIndex == indexPath{
                 return UITableView.automaticDimension
@@ -125,16 +139,13 @@ extension CompanyInfoVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 300
         }
-}
+    }
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.row == 1 {
-        self.selectedIndex = indexPath
-        tableView.reloadData()
+            self.selectedIndex = indexPath
+            tableView.reloadData()
             return indexPath
         }
         return nil
     }
-//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.selectionStyle = .none
-//    }
 }
