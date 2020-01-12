@@ -128,5 +128,18 @@
             "companyRating": "5",
             "about": "Long text",
         }
+    },
+    {
+        "name": "Ainane Sagbilova",
+        "rating": "2.1",
+        "phone": "+375293553525",
+        "email": "dariakojuh@gmail.com",
+        "photo": "https://previews.123rf.com/images/dragonimages/dragonimages1711/dragonimages171100727/90318124-cleaning-lady.jpg",
+        "company": {
+            "name": "DRY cleaners",
+            "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
+            "companyRating": "5",
+            "about": "Long text",
+        }
     }
 ]

@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CompaniesCVC: UICollectionViewController {
     
     private let reuseIdentifier = "companyCell"
-    
     private var gradient: CAGradientLayer! {
         didSet {
             gradient.startPoint = CGPoint(x: 0, y: 0)
@@ -22,17 +22,30 @@ class CompaniesCVC: UICollectionViewController {
         }
     }
     let networkManager = NetworkManager()
-    var companyArray: [CompanyData] = [CompanyData]()
     var selectedIndexPath: Int!
     var companyLogoArray: [UIImage] = [UIImage]()
+    
+    var companyRealm: Results<CompanyRealm>!
     
     override func viewDidAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkManager.fetchOfflineData { (companies) in
-            self.companyArray = companies
+        companyRealm = realm.objects(CompanyRealm.self)
+        saveDataInRealm()
+    }
+    
+    private func saveDataInRealm() {
+        self.networkManager.fetchOfflineData { (companies) in
+            if companies.count != self.companyRealm.count {
+                StorageManager.deleteAll()
+                
+                for company in companies {
+                    let company = CompanyRealm(companyName: company.company.name, companyDescription: nil, companyLogo: company.company.logo, companyRating: company.company.companyRating, aboutCompany: company.company.about)
+                    StorageManager.saveObject(company)
+                }
+            }
         }
     }
     
@@ -59,53 +72,22 @@ class CompaniesCVC: UICollectionViewController {
     // MARK: UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return companyArray.count
+        return companyRealm.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "companyCell", for: indexPath) as? CompanyCell else { return UICollectionViewCell()}
-        let companys = companyArray[indexPath.row]
-        networkManager.uploadImage(url: companys.company.logo!) { (image) in
+        let companys = companyRealm[indexPath.row]
+        
+        networkManager.uploadImage(url: companys.companyLogo!) { (image) in
             DispatchQueue.main.async {
                 cell.companyLogo.image = image
             }
-    }
-        cell.companyName.text = companys.company.name
-        cell.companyPhoneNumber.text = companys.phone
+        }
+        cell.companyName.text = companys.companyName
+        cell.companyPhoneNumber.text = companys.companyDescription
         return cell
     }
-    
-    
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
-    
 }
 extension CompaniesCVC: UICollectionViewDelegateFlowLayout {
     // MARK: UICollectionViewDelegate

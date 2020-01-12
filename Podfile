@@ -6,5 +6,6 @@ target 'CleanHouse' do
   use_frameworks!
 
   # Pods for CleanHouse
+  pod 'RealmSwift'
   pod 'Cosmos', '~> 20.0'
 end

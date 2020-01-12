@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CompanyInfoVC: UIViewController {
     
     @IBOutlet weak var companiesTableView: UITableView!
     
     var companyArray: [CompanyData] = [CompanyData]()
+    var companyRealm: Results<CompanyRealm>!
     var networkManager = NetworkManager()
     var currentIndex = 0
     var topArray = [Double]()
@@ -35,6 +37,8 @@ class CompanyInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        companyRealm = realm.objects(CompanyRealm.self)
+        
         companiesTableView.estimatedRowHeight = 44
         companiesTableView.rowHeight = UITableView.automaticDimension
         
