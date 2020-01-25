@@ -27,18 +27,21 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
                 guard let cellA = tableView.dequeueReusableCell(withIdentifier: "companyViewCell") as? CompanyViewTVC else { return UITableViewCell() }
                 
                 cellA.setupCell(company: company)
+            
+                
+                    
 
-                if company?.companyRating != nil, company?.ratingCount != nil {
-                    let sumRating = Double(company!.companyRating!)!
-                    count = Double(company!.ratingCount!)!
-                    let avarageRating = String(sumRating / count)
-                    cellA.setupRating(rating: avarageRating)
+//                if company?.companyRating != nil, company?.ratingCount != nil {
+//                    let sumRating = Double(company!.companyRating!)!
+//                    count = Double(company!.ratingCount!)!
+//                    let avarageRating = String(sumRating / count)
+//                    cellA.setupRating(rating: avarageRating)
                     NetworkManager.shared.uploadImage(url: (company?.companyLogo)!) { (image) in
                         DispatchQueue.main.async {
                             cellA.companyLogo.image = image
                         }
                     }
-                }
+                
                 return cellA
             case 1:
                 guard let cellB = tableView.dequeueReusableCell(withIdentifier: "aboutCompanyCell") as? AboutCompanyTVC else { return UITableViewCell() }
@@ -50,31 +53,39 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
                 return cellC
             case 3:
                 guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }
-                if company?.userRating != nil, let stringRating = company?.userRating {
-                    rating = Double(stringRating)
-                    cellD.configureCell(rating: rating)
-                } else {
-                    cellD.cosmosRating.didFinishTouchingCosmos = { rating in
-                        if self.rating == nil {
-                            self.rating = rating
-                            self.count += 1
-                            var newRating: Double?
-                            
-                            if self.company?.companyRating != nil {
-                            let oldRating = Double(self.company!.companyRating!)
-                            newRating = oldRating! + rating
-                            } else {
-                            newRating = rating
-                            }
-                            try! realm.write {
-                                self.company?.userRating = String(self.rating!)
-                                self.company?.companyRating = String(newRating!)
-                                self.company?.ratingCount = String(self.count)
-                            }
-                        }
-                        tableView.reloadData()
-                    }
+                
+                if company?.reviewText != "" {
+                    cellD.reviewsCollectionView.isHidden = false
+    
                 }
+                
+//                if company?.userRating != nil, let stringRating = company?.userRating {
+////                    rating = Double(stringRating)
+////                    cellD.configureCell(rating: rating)
+//                } else {
+//                    cellD.cosmosRating.didFinishTouchingCosmos = { rating in
+//                        if self.rating == nil {
+//                            self.rating = rating
+//                            self.count += 1
+//                            var newRating: Double?
+//
+//                            if self.company?.companyRating != nil {
+//                            let oldRating = Double(self.company!.companyRating!)
+//                            newRating = oldRating! + rating
+//                            } else {
+//                            newRating = rating
+//                            }
+//                            try! realm.write {
+//                                self.company?.userRating = String(self.rating!)
+//                                self.company?.companyRating = String(newRating!)
+//                                self.company?.ratingCount = String(self.count)
+//                            }
+//                        }
+//                        tableView.reloadData()
+//                    }
+//                }
+                
+                
                 return cellD
             case 4:
                 guard let cellE = tableView.dequeueReusableCell(withIdentifier: "workersCell") as? WorkersTVC else { return UITableViewCell() }

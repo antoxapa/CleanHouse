@@ -3,247 +3,102 @@
         "company": {
             "name": "Tidy Tom's",
             "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            "description": "bla-bla",
+            "description": "Call us if you want to clean your house!",
             "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
-            "companyRating": "20",
-            "ratingsCount": "4",
         },
         "reviews": {
+            "id": "1",
             "user": "AnthonyPo",
-            "": "Nice!",
+            "title": "Nice!",
             "date": "23.07.2019",
             "rating": "5",
-            "message": "blasdaadadadasdaadadsadadsadasdadsad",
+            "text": "blasdaadadadasdaadadsadadsadasdadsad",
         },
         "workers": {
+            "id": "1",
             "name": "Nadya",
             "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        },
+        }
     },
     {
         "company": {
-        "name": "Tide cleaners",
-        "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
-        "companyRating": "5",
-        "ratingsCount": "1",
-        "about": "Our main wish is to clean up the client, so we make a complete set of work and a little more.",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
+            "name": "Tide cleaners",
+            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
+            "description": "2",
+            "about": "Our main wish is to clean up the client, so we make a complete set of work and a little more.",
         },
+        "reviews": {
+            "id": "",
+            "user": "",
+            "title": "",
+            "date": "",
+            "rating": "",
+            "text": "",
+        },
+        "workers": {
+            "id": "1",
+            "name": "Nadya",
+            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+        }
     },
     {
         "company": {
-        "name": "Bubble Shine",
-        "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
-        "companyRating": "15",
-        "ratingsCount": "3",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
+            "name": "Bubble Shine",
+            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
+            "description": "3",
+            "about": "Long text",
         },
+        "reviews": {
+            
+        },
+        "workers": {
+            "id": "1",
+            "name": "Nadya",
+            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+        }
     },
     {
         "company": {
-        "name": "Hobort cleaners",
-        "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
-        "companyRating": "25",
-        "ratingsCount": "5",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
+            "name": "Hobort cleaners",
+            "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
+            "description": "4",
+            "about": "long text",
         },
+        "reviews": {
+            "id": "1",
+            "user": "AnthonyPo",
+            "title": "Nice!",
+            "date": "23.07.2019",
+            "rating": "2",
+            "text": "blasdaadadadasdaadadsadadsadasdadsad",
+        },
+        "workers": {
+            "id": "1",
+            "name": "Nadya",
+            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+        }
     },
     {
         "company": {
-        "name": "Wilmington cleaners",
-        "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
-        "companyRating": "30",
-        "ratingsCount": "10",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
+            "name": "Wilmington cleaners",
+            "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
+            "description": "5",
+            "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
         },
-    },
-    {
-        "company": {
-        "name": "Royal FineCleaners",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMXK3ykqQ2uzd92S_PSELc3MjkzNMhDkrzDbqmEaNpvzcxXvmlQ&s",
-        "companyRating": "15",
-        "ratingsCount": "3",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
+        "reviews": {
+            "id": "1",
+            "user": "AnthonyPo",
+            "title": "Nice!",
+            "date": "23.07.2019",
+            "rating": "1",
+            "text": "blasdaadadadasdaadadsadadsadasdadsad",
         },
-    },
-    {
-        "company": {
-        "name": "Press",
-        "logo": "",
-        "companyRating": "15",
-        "ratingsCount": "3",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
-        },
-    },
-    {
-        "company": {
-        "name": "Impressive cleaners",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXnRdgAn3yB47mUE4rA8C5qQBO800r2LWbwMG2tUvo9lweB9N&s",
-        "companyRating": "15",
-        "ratingsCount": "3",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
-        },
-    },
-    {
-        "company": {
-        "name": "Greenwash",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPD_XtnFCiEz2cojpngT11Vk8FdvyKf6D1X0y7Zg6hIUCMOHgisQ&s",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
-        },
-    },
-    {
-        "company": {
-        "name": "DRY cleaners",
-        "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            },
-        },
-    },
-    {
-        "company": {
-        "name": "DRY cleaners",
-        "logo": "https://images-platform.99static.com/J1frIwqi0ZFbvcwTVomjiLSbjf4=/0x0:834x834/500x500/top/smart/99designs-contests-attachments/80/80592/attachment_80592535",
-        "companyRating": "10",
-        "ratingsCount": "2",
-        "about": "Long text",
-        "companyRating": "20",
-                "ratingsCount": "4",
-            },
-            "reviews": {
-                "user": "AnthonyPo",
-                "": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "message": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            "workers": {
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            }
+        "workers": {
+            "id": "1",
+            "name": "Nadya",
+            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
         }
     }
 ]
+
+

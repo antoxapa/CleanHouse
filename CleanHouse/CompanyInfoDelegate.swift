@@ -10,6 +10,7 @@ import UIKit
 
 class CompanyInfoDelegate: NSObject, UITableViewDelegate {
     
+    var company: CompanyRealm?
     var selectedIndex: IndexPath?
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -22,6 +23,11 @@ class CompanyInfoDelegate: NSObject, UITableViewDelegate {
             return 120
         } else if indexPath.row == 2 {
             return 120
+        }else if indexPath.row == 3 {
+            if company?.reviewText == "" {
+                return 100
+            }
+            return 300
         } else {
             return 300
         }

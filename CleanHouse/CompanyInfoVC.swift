@@ -42,6 +42,7 @@ class CompanyInfoVC: UIViewController {
         
         dataSource.company = company
         delegate.selectedIndex = selectedIndex
+        delegate.company = company
     }
 
     private func addBackgroundGradient() {

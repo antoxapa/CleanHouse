@@ -15,7 +15,11 @@ class ReviewsTVC: UITableViewCell {
     // MARK: - Reviews
     var userRating: Double?
     
-    @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var reviewsCollectionView: UICollectionView! {
+        didSet {
+            reviewsCollectionView.isHidden = true
+        }
+    }
     @IBOutlet weak var tapToRateLabel: UILabel!
     @IBOutlet weak var writeAReviewButton: UIButton!
     @IBOutlet weak var aboutUsButton: UIButton!

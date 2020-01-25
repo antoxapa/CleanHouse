@@ -8,19 +8,28 @@
 
 import Foundation
 
-public struct CompanyData: Decodable {
-    let name : String
-    let rating: String
-    let phone : String
+struct CompanyData: Decodable {
     let company : Company
-    let photo: String?
-    let userRating: String?
+    let reviews: Reviews
+    let workers: Workers
 }
 
-public struct Company: Decodable {
+struct Company: Decodable {
     let name: String
     let logo: String?
-    let companyRating: String?
-    let ratingsCount: String?
-    let about: String
+    let description: String?
+    let about: String?
+}
+struct Reviews: Decodable {
+    let id: String?
+    let user: String?
+    let title: String?
+    let date: String?
+    let rating: String?
+    let text: String?
+}
+struct Workers: Decodable {
+    let id: String?
+    let name: String?
+    let photo: String?
 }

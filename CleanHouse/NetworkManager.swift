@@ -33,7 +33,7 @@ class NetworkManager {
     
     func fetchOfflineData(complitionHandler: @escaping ([CompanyData]) -> ()) {
         //        let path = "Users/tonypo/Documents/MyProjects/CleanHouse/JSON.rtf"
-        guard let file = Bundle.main.url(forResource: "cleaning", withExtension: "json") else { return }
+        guard let file = Bundle.main.url(forResource: "CleaningCompanies", withExtension: "json") else { return }
         if let data = try? Data(contentsOf: file) {
             do {
                 let decoded = try JSONDecoder().decode([CompanyData].self, from: data)

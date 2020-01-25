@@ -12,7 +12,7 @@ import RealmSwift
 class CompanyCell: UICollectionViewCell {
     
     @IBOutlet weak var companyName: UILabel!
-    @IBOutlet weak var companyPhoneNumber: UILabel!
+    @IBOutlet weak var fewWordsAboutCompany: UILabel!
     @IBOutlet weak var companyLogo: UIImageView! {
         didSet {
             companyLogo.layer.cornerRadius = 15
@@ -21,16 +21,14 @@ class CompanyCell: UICollectionViewCell {
             companyLogo.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
-    @IBOutlet weak var calculateButton: UIButton! {
-        didSet {
-            calculateButton.layer.cornerRadius = 10
-        }
-    }
     
     func setupCompanies(companies: Results<CompanyRealm>, indexPath: IndexPath) {
         let companies = companies[indexPath.row]
         self.companyName.text = companies.companyName
-        self.companyPhoneNumber.text = companies.companyDescription
+        if companies.companyDescription == nil {
+            fewWordsAboutCompany.isHidden = true
+        }
+        self.fewWordsAboutCompany.text = companies.companyDescription
     }
     
     func setupImage(image: UIImage) {

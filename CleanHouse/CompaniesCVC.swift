@@ -46,13 +46,8 @@ class CompaniesCVC: UICollectionViewController {
                 StorageManager.deleteAll()
                 
                 for company in companies {
-                    let company = CompanyRealm(companyName: company.company.name,
-                                               companyDescription: nil,
-                                               companyLogo: company.company.logo,
-                                               companyRating: company.company.companyRating,
-                                               aboutCompany: company.company.about,
-                                               userRating: company.userRating,
-                                               ratingCount: company.company.ratingsCount)
+                    let company = CompanyRealm(companyName: company.company.name, companyDescription: company.company.description, companyLogo: company.company.logo, aboutCompany: company.company.about, reviewUserID: company.reviews.id, reviewUser: company.reviews.user, reviewTitle: company.reviews.title, reviewDate: company.reviews.date, reviewRating: company.reviews.rating, reviewText: company.reviews.text, reviewWorkerID: company.workers.id, reviewWorkerName: company.workers.name, reviewWorkerPhoto: company.workers.photo)
+                    
                     StorageManager.saveObject(company)
                 }
             }
