@@ -30,4 +30,14 @@ class AboutCompanyTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(company: CompanyRealm?, selectedIndex: IndexPath?, indexPath: IndexPath) {
+        self.aboutCompanyTV.text = company?.aboutCompany
+        if self.aboutCompanyTV.contentSize.height > 120 {
+            self.moreButton.isHidden = false
+        }
+        if selectedIndex == indexPath {
+            self.moreButton.isHidden = true
+        }
+    }
+    
 }

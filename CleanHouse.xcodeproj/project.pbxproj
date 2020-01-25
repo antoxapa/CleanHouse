@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */; };
 		063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */; };
-		063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDC2391429500D1FC5E /* RatingTVC.swift */; };
 		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
 		063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CE0239142D000D1FC5E /* WorkersTVC.swift */; };
 		0669183D23CA4DEA002F22DF /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183C23CA4DEA002F22DF /* CompanyModel.swift */; };
 		0669183F23CA5B44002F22DF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183E23CA5B44002F22DF /* StorageManager.swift */; };
+		0669184123CBBD6B002F22DF /* CleaningCompanies.json in Resources */ = {isa = PBXBuildFile; fileRef = 0669184023CBBD6B002F22DF /* CleaningCompanies.json */; };
 		06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780CF2371CD0F001B3717 /* AppDelegate.swift */; };
 		06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780D12371CD0F001B3717 /* SceneDelegate.swift */; };
 		06D780D72371CD0F001B3717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D780D52371CD0F001B3717 /* Main.storyboard */; };
@@ -29,17 +29,20 @@
 		06D7810223784033001B3717 /* cleaning.json in Resources */ = {isa = PBXBuildFile; fileRef = 06D7810123784033001B3717 /* cleaning.json */; };
 		06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237B238910C4004364E0 /* WorkerCell.swift */; };
 		06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237D2389562C004364E0 /* ReviewsCVC.swift */; };
+		06F9E9FC23D369BD007431E4 /* CompanyInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */; };
+		06F9E9FE23D36B91007431E4 /* CompanyInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9E9FD23D36B91007431E4 /* CompanyInfoDelegate.swift */; };
+		06F9EA0223DC3C6F007431E4 /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */; };
 		3BED365800F0E39DEA3BEA3B /* Pods_CleanHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EFA38DA6BE5FC4A2D31EAE /* Pods_CleanHouse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewTVC.swift; sourceTree = "<group>"; };
 		063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVC.swift; sourceTree = "<group>"; };
-		063C0CDC2391429500D1FC5E /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
 		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
 		063C0CE0239142D000D1FC5E /* WorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersTVC.swift; sourceTree = "<group>"; };
 		0669183C23CA4DEA002F22DF /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		0669183E23CA5B44002F22DF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		0669184023CBBD6B002F22DF /* CleaningCompanies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CleaningCompanies.json; path = CleanHouse/Model/CleaningCompanies.json; sourceTree = SOURCE_ROOT; };
 		06D780CC2371CD0F001B3717 /* CleanHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D780CF2371CD0F001B3717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D780D12371CD0F001B3717 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		06D7810123784033001B3717 /* cleaning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cleaning.json; sourceTree = "<group>"; };
 		06F7237B238910C4004364E0 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
 		06F7237D2389562C004364E0 /* ReviewsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCVC.swift; sourceTree = "<group>"; };
+		06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoDataSource.swift; sourceTree = "<group>"; };
+		06F9E9FD23D36B91007431E4 /* CompanyInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoDelegate.swift; sourceTree = "<group>"; };
+		06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingTVC.swift; path = ../../../../.Trash/RatingTVC.swift; sourceTree = "<group>"; };
 		0FCC33C1B203FEF4544943A9 /* Pods-CleanHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanHouse.debug.xcconfig"; path = "Target Support Files/Pods-CleanHouse/Pods-CleanHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		326D099FFBD098C62774A97F /* Pods-CleanHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanHouse.release.xcconfig"; path = "Target Support Files/Pods-CleanHouse/Pods-CleanHouse.release.xcconfig"; sourceTree = "<group>"; };
 		C8EFA38DA6BE5FC4A2D31EAE /* Pods_CleanHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,35 +101,29 @@
 		06D780CE2371CD0F001B3717 /* CleanHouse */ = {
 			isa = PBXGroup;
 			children = (
+				06F9E9FA23D36644007431E4 /* Services */,
 				06F3E1CC239CE41600A73084 /* Model */,
 				06F3E1CB239CE3A600A73084 /* Controllers */,
-				06F3E1C9239CE34E00A73084 /* Cells */,
-				06D780CF2371CD0F001B3717 /* AppDelegate.swift */,
-				06D780D12371CD0F001B3717 /* SceneDelegate.swift */,
-				06D780D52371CD0F001B3717 /* Main.storyboard */,
-				06D780F52371E3E0001B3717 /* NetworkManager.swift */,
-				0669183E23CA5B44002F22DF /* StorageManager.swift */,
-				06D780D82371CD0F001B3717 /* Assets.xcassets */,
-				06D780DA2371CD0F001B3717 /* LaunchScreen.storyboard */,
-				06D7810123784033001B3717 /* cleaning.json */,
-				06D780DD2371CD0F001B3717 /* Info.plist */,
+				06F3E1C9239CE34E00A73084 /* View */,
+				06F9E9FF23DC2DF0007431E4 /* Support Files */,
+				06F9EA0023DC2E0E007431E4 /* IBuilders */,
 			);
 			path = CleanHouse;
 			sourceTree = "<group>";
 		};
-		06F3E1C9239CE34E00A73084 /* Cells */ = {
+		06F3E1C9239CE34E00A73084 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
 				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
+				06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */,
 				063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */,
-				063C0CDC2391429500D1FC5E /* RatingTVC.swift */,
 				063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */,
 				06F7237D2389562C004364E0 /* ReviewsCVC.swift */,
 				063C0CE0239142D000D1FC5E /* WorkersTVC.swift */,
 				06F7237B238910C4004364E0 /* WorkerCell.swift */,
 			);
-			name = Cells;
+			name = View;
 			sourceTree = "<group>";
 		};
 		06F3E1CB239CE3A600A73084 /* Controllers */ = {
@@ -133,6 +133,8 @@
 				06D780EB2371D4D6001B3717 /* CleanerCell.swift */,
 				06D780E32371D471001B3717 /* CompaniesCVC.swift */,
 				06D780EF2371D518001B3717 /* CompanyInfoVC.swift */,
+				06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */,
+				06F9E9FD23D36B91007431E4 /* CompanyInfoDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -142,8 +144,39 @@
 			children = (
 				06D780F32371E377001B3717 /* CompanyData.swift */,
 				0669183C23CA4DEA002F22DF /* CompanyModel.swift */,
+				0669184023CBBD6B002F22DF /* CleaningCompanies.json */,
+				06D7810123784033001B3717 /* cleaning.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		06F9E9FA23D36644007431E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				06D780F52371E3E0001B3717 /* NetworkManager.swift */,
+				0669183E23CA5B44002F22DF /* StorageManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		06F9E9FF23DC2DF0007431E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				06D780CF2371CD0F001B3717 /* AppDelegate.swift */,
+				06D780D12371CD0F001B3717 /* SceneDelegate.swift */,
+				06D780D82371CD0F001B3717 /* Assets.xcassets */,
+				06D780DD2371CD0F001B3717 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		06F9EA0023DC2E0E007431E4 /* IBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				06D780D52371CD0F001B3717 /* Main.storyboard */,
+				06D780DA2371CD0F001B3717 /* LaunchScreen.storyboard */,
+			);
+			name = IBuilders;
 			sourceTree = "<group>";
 		};
 		7E546027D3A2F3A07EE47102 /* Pods */ = {
@@ -225,6 +258,7 @@
 			files = (
 				06D780DC2371CD0F001B3717 /* LaunchScreen.storyboard in Resources */,
 				06D780D92371CD0F001B3717 /* Assets.xcassets in Resources */,
+				0669184123CBBD6B002F22DF /* CleaningCompanies.json in Resources */,
 				06D7810223784033001B3717 /* cleaning.json in Resources */,
 				06D780D72371CD0F001B3717 /* Main.storyboard in Resources */,
 			);
@@ -281,16 +315,18 @@
 			files = (
 				063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */,
 				06D780F42371E377001B3717 /* CompanyData.swift in Sources */,
+				06F9E9FE23D36B91007431E4 /* CompanyInfoDelegate.swift in Sources */,
 				0669183D23CA4DEA002F22DF /* CompanyModel.swift in Sources */,
+				06F9EA0223DC3C6F007431E4 /* RatingTVC.swift in Sources */,
 				0669183F23CA5B44002F22DF /* StorageManager.swift in Sources */,
 				06D780EC2371D4D6001B3717 /* CleanerCell.swift in Sources */,
 				06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */,
 				06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */,
+				06F9E9FC23D369BD007431E4 /* CompanyInfoDataSource.swift in Sources */,
 				06D780EE2371D4E0001B3717 /* CompanyCell.swift in Sources */,
 				06D780E42371D471001B3717 /* CompaniesCVC.swift in Sources */,
 				06D780E62371D489001B3717 /* CleanersCVC.swift in Sources */,
 				06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */,
-				063C0CDD2391429500D1FC5E /* RatingTVC.swift in Sources */,
 				06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */,
 				063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */,
 				063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */,

@@ -11,6 +11,8 @@ import RealmSwift
 
 class CompaniesCVC: UICollectionViewController {
     
+    @IBOutlet weak var sortingButton: UIBarButtonItem!
+    
     private let reuseIdentifier = "companyCell"
     private var gradient: CAGradientLayer! {
         didSet {
@@ -21,32 +23,56 @@ class CompaniesCVC: UICollectionViewController {
             gradient.colors = [startColor, endColor]
         }
     }
-    let networkManager = NetworkManager()
     var selectedIndexPath: Int!
     var companyLogoArray: [UIImage] = [UIImage]()
+    var sortedByRating = true
     
     var companyRealm: Results<CompanyRealm>!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        companyRealm = realm.objects(CompanyRealm.self)
+        sort()
         saveDataInRealm()
     }
     
     private func saveDataInRealm() {
-        self.networkManager.fetchOfflineData { (companies) in
+        NetworkManager.shared.fetchOfflineData { (companies) in
             if companies.count != self.companyRealm.count {
                 StorageManager.deleteAll()
                 
                 for company in companies {
-                    let company = CompanyRealm(companyName: company.company.name, companyDescription: nil, companyLogo: company.company.logo, companyRating: company.company.companyRating, aboutCompany: company.company.about, userRating: company.userRating, ratingCount: company.company.ratingsCount)
+                    let company = CompanyRealm(companyName: company.company.name,
+                                               companyDescription: nil,
+                                               companyLogo: company.company.logo,
+                                               companyRating: company.company.companyRating,
+                                               aboutCompany: company.company.about,
+                                               userRating: company.userRating,
+                                               ratingCount: company.company.ratingsCount)
                     StorageManager.saveObject(company)
                 }
             }
         }
+    }
+    
+    private func sort() {
+        sortedByRating.toggle()
+        if sortedByRating == false {
+            companyRealm = realm.objects(CompanyRealm.self).sorted(byKeyPath: "companyName")
+            sortingButton.image = #imageLiteral(resourceName: "AZ")
+        } else {
+            companyRealm = realm.objects(CompanyRealm.self).sorted(byKeyPath: "companyRating")
+            sortingButton.image = #imageLiteral(resourceName: "ZA")
+        }
+        collectionView.reloadData()
+    }
+    
+    @IBAction func sortButtonAction(_ sender: UIBarButtonItem) {
+        sort()
     }
     
     private func addBackgroundGradient() {
@@ -77,15 +103,13 @@ class CompaniesCVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "companyCell", for: indexPath) as? CompanyCell else { return UICollectionViewCell()}
-        let companys = companyRealm[indexPath.row]
-        
-        networkManager.uploadImage(url: companys.companyLogo!) { (image) in
+        NetworkManager.shared.uploadImage(url: companyRealm[indexPath.row].companyLogo!) { (image) in
             DispatchQueue.main.async {
-                cell.companyLogo.image = image
+                cell.setupImage(image: image)
             }
         }
-        cell.companyName.text = companys.companyName
-        cell.companyPhoneNumber.text = companys.companyDescription
+        cell.setupCompanies(companies: companyRealm, indexPath: indexPath)
+       
         return cell
     }
 }
@@ -94,6 +118,4 @@ extension CompaniesCVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width , height: 100)
     }
-    
-    
 }

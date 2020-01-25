@@ -12,7 +12,6 @@ class CleanersCVC: UICollectionViewController {
     
     private let reuseIdentifier = "cleanerCell"
     
-    let networkManager = NetworkManager()
     var cleanersData: [CompanyData] = [CompanyData]()
     
     private var gradient: CAGradientLayer! {
@@ -36,9 +35,6 @@ class CleanersCVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackgroundGradient()
-        networkManager.fetchOfflineData { (data) in
-            self.cleanersData = data
-        }
     }
     
     // MARK: UICollectionViewDataSource
@@ -55,14 +51,14 @@ class CleanersCVC: UICollectionViewController {
         cell.cleanerRating.text = "Rating: \((cleaners.rating)) / 5"
         cell.cleanerCompany.text = cleaners.company.name
         
-        DispatchQueue.global().async {
-            self.networkManager.uploadImage(url: cleaners.photo!) { (image) in
-                DispatchQueue.main.async {
-                    cell.cleanerPhoto.image = image
-                }
-                
-            }
-        }
+//        DispatchQueue.global().async {
+//            self.networkManager.uploadImage(url: cleaners.photo!) { (image) in
+//                DispatchQueue.main.async {
+//                    cell.cleanerPhoto.image = image
+//                }
+//
+//            }
+//        }
         return cell
     }
 }

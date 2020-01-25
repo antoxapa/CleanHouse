@@ -29,22 +29,22 @@ class CompanyViewTVC: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var topLabel: UILabel!
-    
     @IBOutlet weak var mainRatingView: CosmosView! {
         didSet {
             mainRatingView.settings.updateOnTouch = false
         }
     }
     @IBOutlet weak var mainRatingLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+ 
+    func setupRating(rating: String) {
+        guard let doubleRating = Double(rating) else { return }
+        let roundedRating = round(doubleRating * 10) / 10
+        mainRatingView.rating = roundedRating
+        mainRatingLabel.text = roundedRating.description
     }
     
-    func setupRating(rating: String) {
-    mainRatingView.rating = Double(rating)!
-    mainRatingLabel.text = rating
+    func setupCell(company: CompanyRealm?) {
+        self.companyName.text = company?.companyName
+        self.aboutCompany.text = company?.companyDescription
     }
 }

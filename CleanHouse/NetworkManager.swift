@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class NetworkManager {
+    private init() {}
+    static let shared = NetworkManager()
   
     func fetchData(complitionHandler: @escaping ([CompanyData])->()) {
         let urlString = "https://jsonplaceholder.typicode.com/users"
@@ -39,7 +41,6 @@ class NetworkManager {
             } catch let error {
                 print(error)
             }
-            
         }
     }
     

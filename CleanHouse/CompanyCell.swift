@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CompanyCell: UICollectionViewCell {
     
@@ -24,5 +25,15 @@ class CompanyCell: UICollectionViewCell {
         didSet {
             calculateButton.layer.cornerRadius = 10
         }
+    }
+    
+    func setupCompanies(companies: Results<CompanyRealm>, indexPath: IndexPath) {
+        let companies = companies[indexPath.row]
+        self.companyName.text = companies.companyName
+        self.companyPhoneNumber.text = companies.companyDescription
+    }
+    
+    func setupImage(image: UIImage) {
+        self.companyLogo.image = image
     }
 }
