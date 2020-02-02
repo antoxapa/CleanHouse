@@ -12,6 +12,7 @@
 		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
 		063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CE0239142D000D1FC5E /* WorkersTVC.swift */; };
 		06480C0323E6AECC00D7C17E /* CleaningCompanies.json in Resources */ = {isa = PBXBuildFile; fileRef = 06480C0223E6AECC00D7C17E /* CleaningCompanies.json */; };
+		06480C0D23E6D86900D7C17E /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06480C0C23E6D86900D7C17E /* RatingTVC.swift */; };
 		0669183D23CA4DEA002F22DF /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183C23CA4DEA002F22DF /* CompanyModel.swift */; };
 		0669183F23CA5B44002F22DF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183E23CA5B44002F22DF /* StorageManager.swift */; };
 		06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780CF2371CD0F001B3717 /* AppDelegate.swift */; };
@@ -29,7 +30,6 @@
 		06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237D2389562C004364E0 /* ReviewsCVC.swift */; };
 		06F9E9FC23D369BD007431E4 /* CompanyInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */; };
 		06F9E9FE23D36B91007431E4 /* CompanyInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9E9FD23D36B91007431E4 /* CompanyInfoDelegate.swift */; };
-		06F9EA0223DC3C6F007431E4 /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */; };
 		3BED365800F0E39DEA3BEA3B /* Pods_CleanHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EFA38DA6BE5FC4A2D31EAE /* Pods_CleanHouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +39,7 @@
 		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
 		063C0CE0239142D000D1FC5E /* WorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersTVC.swift; sourceTree = "<group>"; };
 		06480C0223E6AECC00D7C17E /* CleaningCompanies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CleaningCompanies.json; sourceTree = "<group>"; };
+		06480C0C23E6D86900D7C17E /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
 		0669183C23CA4DEA002F22DF /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		0669183E23CA5B44002F22DF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		06D780CC2371CD0F001B3717 /* CleanHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +59,6 @@
 		06F7237D2389562C004364E0 /* ReviewsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCVC.swift; sourceTree = "<group>"; };
 		06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoDataSource.swift; sourceTree = "<group>"; };
 		06F9E9FD23D36B91007431E4 /* CompanyInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoDelegate.swift; sourceTree = "<group>"; };
-		06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingTVC.swift; path = ../../../../.Trash/RatingTVC.swift; sourceTree = "<group>"; };
 		0FCC33C1B203FEF4544943A9 /* Pods-CleanHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanHouse.debug.xcconfig"; path = "Target Support Files/Pods-CleanHouse/Pods-CleanHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		326D099FFBD098C62774A97F /* Pods-CleanHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanHouse.release.xcconfig"; path = "Target Support Files/Pods-CleanHouse/Pods-CleanHouse.release.xcconfig"; sourceTree = "<group>"; };
 		C8EFA38DA6BE5FC4A2D31EAE /* Pods_CleanHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 			children = (
 				06D780ED2371D4E0001B3717 /* CompanyCell.swift */,
 				063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */,
-				06F9EA0123DC3C6F007431E4 /* RatingTVC.swift */,
+				06480C0C23E6D86900D7C17E /* RatingTVC.swift */,
 				063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */,
 				063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */,
 				06F7237D2389562C004364E0 /* ReviewsCVC.swift */,
@@ -319,7 +319,6 @@
 				06D780F42371E377001B3717 /* CompanyData.swift in Sources */,
 				06F9E9FE23D36B91007431E4 /* CompanyInfoDelegate.swift in Sources */,
 				0669183D23CA4DEA002F22DF /* CompanyModel.swift in Sources */,
-				06F9EA0223DC3C6F007431E4 /* RatingTVC.swift in Sources */,
 				0669183F23CA5B44002F22DF /* StorageManager.swift in Sources */,
 				06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */,
 				06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */,
@@ -330,6 +329,7 @@
 				06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */,
 				063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */,
 				063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */,
+				06480C0D23E6D86900D7C17E /* RatingTVC.swift in Sources */,
 				063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */,
 				06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */,
 				06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */,

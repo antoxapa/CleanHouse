@@ -544,15 +544,14 @@ Means do not contain harmful components for people and animals, they do not dama
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="averageRatingLabel" destination="7zj-5Z-rP8" id="7nD-9R-0QW"/>
-                                            <outlet property="fiveStarsProgressView" destination="Qe0-1k-q7q" id="9WI-Wc-v0X"/>
-                                            <outlet property="fourStarsProgressView" destination="8bU-vQ-wZ7" id="OBc-Me-MZ0"/>
-                                            <outlet property="numberOfRatingsLabel" destination="B2E-Fm-V6J" id="ok8-E0-UYp"/>
-                                            <outlet property="oneStarsProgressView" destination="5eU-ez-1o9" id="9hi-ph-LG0"/>
-                                            <outlet property="outOfFiveLabel" destination="hY9-SS-C6b" id="mP0-nv-WaT"/>
-                                            <outlet property="ratingAndReviewsLabel" destination="gna-tq-si7" id="Jfo-pa-x8Y"/>
-                                            <outlet property="threeStarsProgressView" destination="Ojh-vR-hSU" id="gK5-GU-Ylf"/>
-                                            <outlet property="twoStarsProgressView" destination="mLZ-YV-QSN" id="eBz-fm-qD6"/>
+                                            <outlet property="averageRatingLabel" destination="7zj-5Z-rP8" id="rdg-g0-gog"/>
+                                            <outlet property="countRatingLabel" destination="B2E-Fm-V6J" id="iRl-2f-LW7"/>
+                                            <outlet property="fivePV" destination="Qe0-1k-q7q" id="JLZ-Nn-WZy"/>
+                                            <outlet property="fourPV" destination="8bU-vQ-wZ7" id="qUd-y2-85S"/>
+                                            <outlet property="onePV" destination="5eU-ez-1o9" id="KPe-pg-VGE"/>
+                                            <outlet property="ratingAndReviewsLabel" destination="gna-tq-si7" id="0Fj-gQ-l6p"/>
+                                            <outlet property="threePV" destination="Ojh-vR-hSU" id="4QZ-ZX-DUy"/>
+                                            <outlet property="twoPV" destination="mLZ-YV-QSN" id="X0c-Qi-9gL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reviewsCell" rowHeight="300.5" id="rF0-hT-Sab" customClass="ReviewsTVC" customModule="CleanHouse" customModuleProvider="target">

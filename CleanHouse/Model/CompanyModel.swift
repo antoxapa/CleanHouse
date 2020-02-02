@@ -47,14 +47,13 @@ class CompanyRealm: Object {
     @objc dynamic var companyLogo: String?
     @objc dynamic var aboutCompany: String?
     
-    
-        convenience init(companyName: String, companyDescription: String?, companyLogo: String?, aboutCompany: String?) {
-            self.init()
-            self.companyName = companyName
-            self.companyDescription = companyDescription
-            self.companyLogo = companyLogo
-            self.aboutCompany = aboutCompany
-        }
+    convenience init(companyName: String, companyDescription: String?, companyLogo: String?, aboutCompany: String?) {
+        self.init()
+        self.companyName = companyName
+        self.companyDescription = companyDescription
+        self.companyLogo = companyLogo
+        self.aboutCompany = aboutCompany
+    }
 }
 class CompaniesRealm: Object {
     let company = List<CompanyRealm>()
@@ -62,7 +61,7 @@ class CompaniesRealm: Object {
     let workers = List<WorkersRealm>()
     
     convenience init(company: CompanyRealm, reviews: ReviewsRealm, workers: WorkersRealm) {
-               self.init()
+        self.init()
         self.company.append(company)
         self.reviews.append(reviews)
         self.workers.append(workers)
