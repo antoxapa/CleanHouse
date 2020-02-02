@@ -9,7 +9,7 @@
 import Foundation
 
 struct CompanyData: Decodable {
-    let company : Company
+    let company: Company
     let reviews: Reviews
     let workers: Workers
 }

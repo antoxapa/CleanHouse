@@ -11,9 +11,9 @@
 		063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */; };
 		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
 		063C0CE1239142D000D1FC5E /* WorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CE0239142D000D1FC5E /* WorkersTVC.swift */; };
+		06480C0323E6AECC00D7C17E /* CleaningCompanies.json in Resources */ = {isa = PBXBuildFile; fileRef = 06480C0223E6AECC00D7C17E /* CleaningCompanies.json */; };
 		0669183D23CA4DEA002F22DF /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183C23CA4DEA002F22DF /* CompanyModel.swift */; };
 		0669183F23CA5B44002F22DF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669183E23CA5B44002F22DF /* StorageManager.swift */; };
-		0669184123CBBD6B002F22DF /* CleaningCompanies.json in Resources */ = {isa = PBXBuildFile; fileRef = 0669184023CBBD6B002F22DF /* CleaningCompanies.json */; };
 		06D780D02371CD0F001B3717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780CF2371CD0F001B3717 /* AppDelegate.swift */; };
 		06D780D22371CD0F001B3717 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780D12371CD0F001B3717 /* SceneDelegate.swift */; };
 		06D780D72371CD0F001B3717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D780D52371CD0F001B3717 /* Main.storyboard */; };
@@ -38,9 +38,9 @@
 		063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVC.swift; sourceTree = "<group>"; };
 		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
 		063C0CE0239142D000D1FC5E /* WorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersTVC.swift; sourceTree = "<group>"; };
+		06480C0223E6AECC00D7C17E /* CleaningCompanies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CleaningCompanies.json; sourceTree = "<group>"; };
 		0669183C23CA4DEA002F22DF /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		0669183E23CA5B44002F22DF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		0669184023CBBD6B002F22DF /* CleaningCompanies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CleaningCompanies.json; path = CleanHouse/Model/CleaningCompanies.json; sourceTree = SOURCE_ROOT; };
 		06D780CC2371CD0F001B3717 /* CleanHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D780CF2371CD0F001B3717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D780D12371CD0F001B3717 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06480C0123E6A9D200D7C17E /* JSON files */ = {
+			isa = PBXGroup;
+			children = (
+				06480C0223E6AECC00D7C17E /* CleaningCompanies.json */,
+				06D7810123784033001B3717 /* cleaning.json */,
+			);
+			path = "JSON files";
+			sourceTree = "<group>";
+		};
 		06D780C32371CD0F001B3717 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +147,7 @@
 			children = (
 				06D780F32371E377001B3717 /* CompanyData.swift */,
 				0669183C23CA4DEA002F22DF /* CompanyModel.swift */,
-				0669184023CBBD6B002F22DF /* CleaningCompanies.json */,
-				06D7810123784033001B3717 /* cleaning.json */,
+				06480C0123E6A9D200D7C17E /* JSON files */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,9 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06480C0323E6AECC00D7C17E /* CleaningCompanies.json in Resources */,
 				06D780DC2371CD0F001B3717 /* LaunchScreen.storyboard in Resources */,
 				06D780D92371CD0F001B3717 /* Assets.xcassets in Resources */,
-				0669184123CBBD6B002F22DF /* CleaningCompanies.json in Resources */,
 				06D7810223784033001B3717 /* cleaning.json in Resources */,
 				06D780D72371CD0F001B3717 /* Main.storyboard in Resources */,
 			);

@@ -24,9 +24,9 @@ class CompanyInfoDelegate: NSObject, UITableViewDelegate {
         } else if indexPath.row == 2 {
             return 120
         }else if indexPath.row == 3 {
-            if company?.reviewText == "" {
-                return 100
-            }
+//            if company?.reviewText == "" {
+//                return 100
+//            }
             return 300
         } else {
             return 300

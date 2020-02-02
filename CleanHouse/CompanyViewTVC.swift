@@ -47,17 +47,17 @@ class CompanyViewTVC: UITableViewCell {
         self.companyName.text = company?.companyName
         self.aboutCompany.text = company?.companyDescription
         
-        if let rating = company?.reviewRating {
-            if rating != "" {
-                let doubleRating = Double(rating)
-                mainRatingView.rating = doubleRating!
-                mainRatingLabel.isHidden = false
-                mainRatingLabel.text = doubleRating?.description
-            } else {
-                mainRatingLabel.isHidden = true
-            }
-        } else {
-            mainRatingLabel.isHidden = true
-        }
+//        if let rating = company?.reviewRating {
+//            if rating != "" {
+//                let doubleRating = Double(rating)
+//                mainRatingView.rating = doubleRating!
+//                mainRatingLabel.isHidden = false
+//                mainRatingLabel.text = doubleRating?.description
+//            } else {
+//                mainRatingLabel.isHidden = true
+//            }
+//        } else {
+//            mainRatingLabel.isHidden = true
+//        }
     }
 }

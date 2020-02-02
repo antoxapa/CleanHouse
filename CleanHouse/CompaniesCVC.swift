@@ -45,10 +45,15 @@ class CompaniesCVC: UICollectionViewController {
             if companies.count != self.companyRealm.count {
                 StorageManager.deleteAll()
                 
-                for company in companies {
-                    let company = CompanyRealm(companyName: company.company.name, companyDescription: company.company.description, companyLogo: company.company.logo, aboutCompany: company.company.about, reviewUserID: company.reviews.id, reviewUser: company.reviews.user, reviewTitle: company.reviews.title, reviewDate: company.reviews.date, reviewRating: company.reviews.rating, reviewText: company.reviews.text, reviewWorkerID: company.workers.id, reviewWorkerName: company.workers.name, reviewWorkerPhoto: company.workers.photo)
+                for item in companies {
+                    let company = CompanyRealm(companyName: item.company.name, companyDescription: item.company.description, companyLogo: item.company.logo, aboutCompany: item.company.about)
+                    let reviews = ReviewsRealm(reviewUserID: item.reviews.id, reviewUser: item.reviews.user, reviewTitle: item.reviews.title, reviewDate: item.reviews.date, reviewRating: item.reviews.rating, reviewText: item.reviews.text)
+                    let workers = WorkersRealm(idWorker: item.workers.id, workerName: item.workers.name, workerPhoto: item.workers.photo)
+
+                    let companies = CompaniesRealm(company: company, reviews: reviews, workers: workers)
+//                    let company = CompanyRealm(companyName: company.company.name, companyDescription: company.company.description, companyLogo: company.company.logo, aboutCompany: company.company.about, reviewUserID: company.reviews.id, reviewUser: company.reviews.user, reviewTitle: company.reviews.title, reviewDate: company.reviews.date, reviewRating: company.reviews.rating, reviewText: company.reviews.text, reviewWorkerID: company.workers.id, reviewWorkerName: company.workers.name, reviewWorkerPhoto: company.workers.photo)
                     
-                    StorageManager.saveObject(company)
+                    StorageManager.saveObject(companies)
                 }
             }
         }

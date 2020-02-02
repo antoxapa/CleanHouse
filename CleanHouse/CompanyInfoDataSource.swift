@@ -54,10 +54,10 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
             case 3:
                 guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }
                 
-                if company?.reviewText != "" {
-                    cellD.reviewsCollectionView.isHidden = false
-    
-                }
+//                if company?.reviewText != "" {
+//                    cellD.reviewsCollectionView.isHidden = false
+//    
+//                }
                 
 //                if company?.userRating != nil, let stringRating = company?.userRating {
 ////                    rating = Double(stringRating)
