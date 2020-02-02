@@ -27,15 +27,8 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
                 guard let cellA = tableView.dequeueReusableCell(withIdentifier: "companyViewCell") as? CompanyViewTVC else { return UITableViewCell() }
                 
                 cellA.setupCell(company: company)
+                cellA.setupRating(company: company)
             
-                
-                    
-
-//                if company?.companyRating != nil, company?.ratingCount != nil {
-//                    let sumRating = Double(company!.companyRating!)!
-//                    count = Double(company!.ratingCount!)!
-//                    let avarageRating = String(sumRating / count)
-//                    cellA.setupRating(rating: avarageRating)
                     NetworkManager.shared.uploadImage(url: (company?.companyLogo)!) { (image) in
                         DispatchQueue.main.async {
                             cellA.companyLogo.image = image
@@ -49,7 +42,7 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
                 return cellB
             case 2:
                 guard let cellC = tableView.dequeueReusableCell(withIdentifier: "ratingCell") as? RatingTVC else { return UITableViewCell() }
-               
+                cellC.setupRatingView(company: company)
                 return cellC
             case 3:
                 guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }

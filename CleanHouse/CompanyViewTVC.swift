@@ -11,6 +11,8 @@ import Cosmos
 
 class CompanyViewTVC: UITableViewCell {
     
+    var sumRating = 0.0
+    
     // MARK: - CompanyView
     @IBOutlet weak var companyLogo: UIImageView! {
         didSet {
@@ -36,28 +38,24 @@ class CompanyViewTVC: UITableViewCell {
     }
     @IBOutlet weak var mainRatingLabel: UILabel!
     
-    func setupRating(rating: String) {
-        guard let doubleRating = Double(rating) else { return }
-        let roundedRating = round(doubleRating * 10) / 10
-        mainRatingView.rating = roundedRating
-        mainRatingLabel.text = roundedRating.description
+    func setupRating(company: CompanyRealm?) {
+        if let reviewsList = company?.reviews {
+            for item in reviewsList {
+                guard let rating = item.reviewRating else { return mainRatingLabel.isHidden = true }
+                if let sumRatingToInt = Double(rating) {
+                    sumRating += sumRatingToInt
+                    let roundedRating = round(sumRating * 10) / 10
+                    mainRatingView.rating = roundedRating
+                    mainRatingLabel.text = roundedRating.description
+                } else {
+                    mainRatingLabel.isHidden = true
+                }
+            }
+        }
     }
     
     func setupCell(company: CompanyRealm?) {
         self.companyName.text = company?.companyName
         self.aboutCompany.text = company?.companyDescription
-        
-//        if let rating = company?.reviewRating {
-//            if rating != "" {
-//                let doubleRating = Double(rating)
-//                mainRatingView.rating = doubleRating!
-//                mainRatingLabel.isHidden = false
-//                mainRatingLabel.text = doubleRating?.description
-//            } else {
-//                mainRatingLabel.isHidden = true
-//            }
-//        } else {
-//            mainRatingLabel.isHidden = true
-//        }
     }
 }

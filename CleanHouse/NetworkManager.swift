@@ -50,6 +50,9 @@ class NetworkManager {
         _ = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 sendImage(image)
+            } else {
+                let error = error
+                print(error)
             }
         }.resume()
     }

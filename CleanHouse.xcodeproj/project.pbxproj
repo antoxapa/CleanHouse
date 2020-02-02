@@ -25,7 +25,6 @@
 		06D780F02371D518001B3717 /* CompanyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780EF2371D518001B3717 /* CompanyInfoVC.swift */; };
 		06D780F42371E377001B3717 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F32371E377001B3717 /* CompanyData.swift */; };
 		06D780F62371E3E0001B3717 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D780F52371E3E0001B3717 /* NetworkManager.swift */; };
-		06D7810223784033001B3717 /* cleaning.json in Resources */ = {isa = PBXBuildFile; fileRef = 06D7810123784033001B3717 /* cleaning.json */; };
 		06F7237C238910C4004364E0 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237B238910C4004364E0 /* WorkerCell.swift */; };
 		06F7237E2389562C004364E0 /* ReviewsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7237D2389562C004364E0 /* ReviewsCVC.swift */; };
 		06F9E9FC23D369BD007431E4 /* CompanyInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */; };
@@ -54,7 +53,6 @@
 		06D780EF2371D518001B3717 /* CompanyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		06D780F32371E377001B3717 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		06D780F52371E3E0001B3717 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		06D7810123784033001B3717 /* cleaning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cleaning.json; sourceTree = "<group>"; };
 		06F7237B238910C4004364E0 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
 		06F7237D2389562C004364E0 /* ReviewsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCVC.swift; sourceTree = "<group>"; };
 		06F9E9FB23D369BD007431E4 /* CompanyInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoDataSource.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				06480C0223E6AECC00D7C17E /* CleaningCompanies.json */,
-				06D7810123784033001B3717 /* cleaning.json */,
 			);
 			path = "JSON files";
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 				06480C0323E6AECC00D7C17E /* CleaningCompanies.json in Resources */,
 				06D780DC2371CD0F001B3717 /* LaunchScreen.storyboard in Resources */,
 				06D780D92371CD0F001B3717 /* Assets.xcassets in Resources */,
-				06D7810223784033001B3717 /* cleaning.json in Resources */,
 				06D780D72371CD0F001B3717 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
