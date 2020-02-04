@@ -42,7 +42,9 @@ class CompanyInfoDataSource: NSObject, UITableViewDataSource {
                 return cellB
             case 2:
                 guard let cellC = tableView.dequeueReusableCell(withIdentifier: "ratingCell") as? RatingTVC else { return UITableViewCell() }
+                if let company = company {
                 cellC.setupRatingView(company: company)
+                }
                 return cellC
             case 3:
                 guard let cellD = tableView.dequeueReusableCell(withIdentifier: "reviewsCell") as? ReviewsTVC else { return UITableViewCell() }

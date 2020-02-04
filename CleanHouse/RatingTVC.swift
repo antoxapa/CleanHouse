@@ -10,10 +10,6 @@ import UIKit
 
 class RatingTVC: UITableViewCell {
     
-    var ratingArray: [Int] = [0]
-    
-    
-    
     @IBOutlet weak var ratingAndReviewsLabel: UILabel!
     @IBOutlet weak var averageRatingLabel: UILabel!
     @IBOutlet weak var countRatingLabel: UILabel!
@@ -22,38 +18,42 @@ class RatingTVC: UITableViewCell {
     @IBOutlet weak var fourPV: UIProgressView!
     @IBOutlet weak var threePV: UIProgressView!
     @IBOutlet weak var twoPV: UIProgressView!
-    @IBOutlet weak var onePV: UIProgressView! {
-        didSet {
-            let filtered = self.ratingArray.filter { $0 == 1 }
-                .count
-            let progress = Float(filtered / ratingArray.count)
-            onePV.setProgress(progress, animated: true)
+    @IBOutlet weak var onePV: UIProgressView!
+    
+    
+    func setupRatingView(company: CompanyRealm) {
+        var ratingArray: [Int] = []
+        
+        for item in company.reviews {
+            guard let rating = item.reviewRating else { return }
+            if let intRating = Int(rating) {
+                ratingArray.append(intRating)
+            }
         }
+        let sum = ratingArray.reduce(0,+)
+        let averageRating = Double(sum) / Double(ratingArray.count)
+        averageRatingLabel.text = String(format: "%.1f", averageRating)
+        countRatingLabel.text = "\(company.reviews.count) Ratings"
+        setupProgressViews(ratingArray: ratingArray)
     }
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    func setupRatingView(company: CompanyRealm?) {
-        if let reviewsList = company?.reviews {
-            for item in reviewsList {
-                guard let rating = item.reviewRating else { return }
-                print(rating)
-                if let intRating = Int(rating) {
-                    ratingArray.append(intRating)
-                let sum = ratingArray.reduce(0,+)
-                averageRatingLabel.text = "\(Double(sum / ratingArray.count))"
-                }
+    private func setupProgressViews(ratingArray: [Int]) {
+        for mark in 1...5 {
+            let filtered = ratingArray.filter { $0 == mark }.count
+            let floatFiltered = Float(filtered) / Float(ratingArray.count)
+            switch mark {
+            case 1:
+                onePV.progress = floatFiltered
+            case 2:
+                twoPV.progress = floatFiltered
+            case 3:
+                threePV.progress = floatFiltered
+            case 4:
+                fourPV.progress = floatFiltered
+            case 5:
+                fivePV.progress = floatFiltered
+            default:
+                print("No satysfying ratings")
             }
         }
     }

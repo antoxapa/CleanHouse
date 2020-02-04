@@ -28,7 +28,7 @@ class CompaniesCVC: UICollectionViewController {
     var sortedByRating = true
     
     var companyRealm: Results<CompanyRealm>!
-    var company: CompanyRealm?
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,7 +37,6 @@ class CompaniesCVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         sort()
         saveDataInRealm()
     }
@@ -46,20 +45,28 @@ class CompaniesCVC: UICollectionViewController {
         NetworkManager.shared.fetchOfflineData { (companies) in
             if companies.count != self.companyRealm.count {
                 StorageManager.deleteAll()
-                
-                for item in companies {
-                    for review in item.reviews! {
-                        let reviews = ReviewsRealm(reviewUserID: review.id, reviewUser: review.user, reviewTitle: review.title, reviewDate: review.date, reviewRating: review.rating, reviewText: review.text)
-        
-                        for worker in item.workers! {
-                            let workers = WorkersRealm(idWorker: worker.id, workerName: worker.name, workerPhoto: worker.photo)
-                            
-                            self.company = CompanyRealm(companyName: item.name, companyDescription: item.description, companyLogo: item.logo, aboutCompany: item.about, reviews: reviews, workers: workers)
+                self.saveCompany(companies: companies)
+            }
+        }
+    }
+    
+    private func saveCompany(companies: [CompanyData] ) {
+        for item in companies {
+            let company = CompanyRealm(companyName: item.name, companyDescription: item.description, companyLogo: item.logo, aboutCompany: item.about)
+            if let reviewsArray = item.reviews {
+                for review in reviewsArray {
+                    let review = ReviewsRealm(reviewUserID: review.id, reviewUser: review.user, reviewTitle: review.title, reviewDate: review.date, reviewRating: review.rating, reviewText: review.text)
+                    company.reviews.append(review)
+                    
+                    if let workersArray = item.workers {
+                        for worker in workersArray {
+                            let worker = WorkersRealm(idWorker: worker.id, workerName: worker.name, workerPhoto: worker.photo)
+                            company.workers.append(worker)
                         }
                     }
-                    StorageManager.saveObject(self.company!)
                 }
             }
+            StorageManager.saveObject(company)
         }
     }
     

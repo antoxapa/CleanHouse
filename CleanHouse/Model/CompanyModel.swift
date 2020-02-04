@@ -18,15 +18,12 @@ class CompanyRealm: Object {
     let reviews = List<ReviewsRealm>()
     let workers = List<WorkersRealm>()
     
-    convenience init(companyName: String?, companyDescription: String?, companyLogo: String?, aboutCompany: String?, reviews: ReviewsRealm, workers: WorkersRealm) {
+    convenience init(companyName: String?, companyDescription: String?, companyLogo: String?, aboutCompany: String?) {
         self.init()
         self.companyName = companyName
         self.companyDescription = companyDescription
         self.companyLogo = companyLogo
         self.aboutCompany = aboutCompany
-        self.reviews.append(reviews)
-        self.workers.append(workers)
-    
     }
 }
 
