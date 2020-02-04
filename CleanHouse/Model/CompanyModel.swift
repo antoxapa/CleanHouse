@@ -8,6 +8,28 @@
 
 import RealmSwift
 
+class CompanyRealm: Object {
+    
+    @objc dynamic var companyName: String?
+    @objc dynamic var companyDescription: String?
+    @objc dynamic var companyLogo: String?
+    @objc dynamic var aboutCompany: String?
+    
+    let reviews = List<ReviewsRealm>()
+    let workers = List<WorkersRealm>()
+    
+    convenience init(companyName: String?, companyDescription: String?, companyLogo: String?, aboutCompany: String?, reviews: ReviewsRealm, workers: WorkersRealm) {
+        self.init()
+        self.companyName = companyName
+        self.companyDescription = companyDescription
+        self.companyLogo = companyLogo
+        self.aboutCompany = aboutCompany
+        self.reviews.append(reviews)
+        self.workers.append(workers)
+    
+    }
+}
+
 class ReviewsRealm: Object {
     @objc dynamic var reviewUserID: String?
     @objc dynamic var reviewUser: String?
@@ -40,23 +62,4 @@ class WorkersRealm: Object {
     }
 }
 
-class CompanyRealm: Object {
-    
-    @objc dynamic var companyName: String?
-    @objc dynamic var companyDescription: String?
-    @objc dynamic var companyLogo: String?
-    @objc dynamic var aboutCompany: String?
-    
-    let reviews = List<ReviewsRealm>()
-    let workers = List<WorkersRealm>()
-    
-    convenience init(companyName: String?, companyDescription: String?, companyLogo: String?, aboutCompany: String?, reviews: ReviewsRealm, workers: WorkersRealm) {
-        self.init()
-        self.companyName = companyName
-        self.companyDescription = companyDescription
-        self.companyLogo = companyLogo
-        self.aboutCompany = aboutCompany
-        self.reviews.append(reviews)
-        self.workers.append(workers)
-    }
-}
+

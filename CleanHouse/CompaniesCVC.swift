@@ -28,6 +28,7 @@ class CompaniesCVC: UICollectionViewController {
     var sortedByRating = true
     
     var companyRealm: Results<CompanyRealm>!
+    var company: CompanyRealm?
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,6 +37,7 @@ class CompaniesCVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         sort()
         saveDataInRealm()
     }
@@ -46,13 +48,16 @@ class CompaniesCVC: UICollectionViewController {
                 StorageManager.deleteAll()
                 
                 for item in companies {
-                   
-                    let reviews = ReviewsRealm(reviewUserID: item.reviews.id, reviewUser: item.reviews.user, reviewTitle: item.reviews.title, reviewDate: item.reviews.date, reviewRating: item.reviews.rating, reviewText: item.reviews.text)
-                    let workers = WorkersRealm(idWorker: item.workers.id, workerName: item.workers.name, workerPhoto: item.workers.photo)
-
-                    let company = CompanyRealm(companyName: item.company.name, companyDescription: item.company.description, companyLogo: item.company.logo, aboutCompany: item.company.about, reviews: reviews, workers: workers)
-                    
-                    StorageManager.saveObject(company)
+                    for review in item.reviews! {
+                        let reviews = ReviewsRealm(reviewUserID: review.id, reviewUser: review.user, reviewTitle: review.title, reviewDate: review.date, reviewRating: review.rating, reviewText: review.text)
+        
+                        for worker in item.workers! {
+                            let workers = WorkersRealm(idWorker: worker.id, workerName: worker.name, workerPhoto: worker.photo)
+                            
+                            self.company = CompanyRealm(companyName: item.name, companyDescription: item.description, companyLogo: item.logo, aboutCompany: item.about, reviews: reviews, workers: workers)
+                        }
+                    }
+                    StorageManager.saveObject(self.company!)
                 }
             }
         }
@@ -108,7 +113,7 @@ class CompaniesCVC: UICollectionViewController {
             }
         }
         cell.setupCompanies(companies: companyRealm, indexPath: indexPath)
-       
+        
         return cell
     }
 }

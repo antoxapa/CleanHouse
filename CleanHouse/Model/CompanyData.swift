@@ -9,16 +9,12 @@
 import Foundation
 
 struct CompanyData: Decodable {
-    let company: Company
-    let reviews: Reviews
-    let workers: Workers
-}
-
-struct Company: Decodable {
-    let name: String
+    let name: String?
     let logo: String?
     let description: String?
     let about: String?
+    let reviews: [Reviews]?
+    let workers: [Workers]?
 }
 struct Reviews: Decodable {
     let id: String?

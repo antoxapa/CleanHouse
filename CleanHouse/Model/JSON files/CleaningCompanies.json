@@ -1,104 +1,138 @@
 [
     {
-        "company": {
-            "name": "Tidy Tom's",
-            "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-            "description": "Call us if you want to clean your house!",
-            "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
-        },
-        "reviews": {
-            "id": "1",
-            "user": "AnthonyPo",
-            "title": "Nice!",
-            "date": "23.07.2019",
-            "rating": "5",
-            "text": "blasdaadadadasdaadadsadadsadasdadsad",
-        },
-        "workers": {
-            "id": "1",
-            "name": "Nadya",
-            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        }
+        "name": "Tidy Tom's",
+        "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+        "description": "Call us if you want to clean your house!",
+        "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
+        "reviews": [
+            {
+                "id": "1",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "5",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            },
+            {
+                "id": "2",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "2",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            }
+        ],
+        "workers": [
+            {
+                "id": "1",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+            },
+            {
+                "id": "2",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+            }
+        ]
     },
     {
-        "company": {
-            "name": "Tide cleaners",
-            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
-            "description": "2",
-            "about": "Our main wish is to clean up the client, so we make a complete set of work and a little more.",
-        },
-        "reviews": {
-            "id": "",
-            "user": "",
-            "title": "",
-            "date": "",
-            "rating": "",
-            "text": "",
-        },
-        "workers": {
-            "id": "1",
-            "name": "Nadya",
-            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        }
+        "name": "Tide cleaners",
+        "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo1.jpg",
+        "description": "Hello! Choose us plz!",
+        "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
+        "reviews": [
+            {
+                "id": "1",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "5",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            },
+            {
+                "id": "2",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "2",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            },
+            {
+                "id": "3",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "4",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            }
+        ],
+        "workers": [
+            {
+                "id": "1",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+            },
+            {
+                "id": "2",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+            }
+        ]
     },
     {
-        "company": {
-            "name": "Bubble Shine",
-            "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
-            "description": "3",
-            "about": "Long text",
-        },
-        "reviews": {
-            
-        },
-        "workers": {
-            "id": "1",
-            "name": "Nadya",
-            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        }
+        "name": "Bubble Shine",
+        "logo": "https://freelogo-assets.s3.amazonaws.com/sites/all/themes/freelogoservices/images/cleaning_logo4.jpg",
+        "description": "bla-bla",
+        "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
+        "reviews": [
+            {
+                "id": "1",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "5",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            }
+        ],
+        "workers": [
+            {
+                "id": "1",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+            },
+            {
+                "id": "2",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+            }
+        ]
     },
     {
-        "company": {
-            "name": "Hobort cleaners",
-            "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
-            "description": "4",
-            "about": "long text",
-        },
-        "reviews": {
-            "id": "1",
-            "user": "AnthonyPo",
-            "title": "Nice!",
-            "date": "23.07.2019",
-            "rating": "2",
-            "text": "blasdaadadadasdaadadsadadsadasdadsad",
-        },
-        "workers": {
-            "id": "1",
-            "name": "Nadya",
-            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        }
-    },
-    {
-        "company": {
-            "name": "Wilmington cleaners",
-            "logo": "https://www.springerstudios.com/web/wpc/uploads/2016/03/wilmington_cleaners_full.jpg",
-            "description": "5",
-            "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
-        },
-        "reviews": {
-            "id": "1",
-            "user": "AnthonyPo",
-            "title": "Nice!",
-            "date": "23.07.2019",
-            "rating": "1",
-            "text": "blasdaadadadasdaadadsadadsadasdadsad",
-        },
-        "workers": {
-            "id": "1",
-            "name": "Nadya",
-            "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
-        }
+        "name": "Hobort cleaners",
+        "logo": "https://dypdvfcjkqkg2.cloudfront.net/large/6355872-5962.png",
+        "description": "Hobor!",
+        "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
+        "reviews": [
+            {
+                "id": "1",
+                "user": "AnthonyPo",
+                "title": "Nice!",
+                "date": "23.07.2019",
+                "rating": "5",
+                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+            }
+        ],
+        "workers": [
+            {
+                "id": "1",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+            },
+            {
+                "id": "2",
+                "name": "Nadya",
+                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+            }
+        ]
     }
 ]
-
-

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0617E0DA23E7309A000289AD /* cleaning.json in Resources */ = {isa = PBXBuildFile; fileRef = 0617E0D923E7309A000289AD /* cleaning.json */; };
 		063C0CD92391426600D1FC5E /* CompanyViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */; };
 		063C0CDB2391428000D1FC5E /* AboutCompanyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */; };
 		063C0CDF239142AD00D1FC5E /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0617E0D923E7309A000289AD /* cleaning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cleaning.json; path = ../../../../../../.Trash/cleaning.json; sourceTree = "<group>"; };
 		063C0CD82391426600D1FC5E /* CompanyViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewTVC.swift; sourceTree = "<group>"; };
 		063C0CDA2391428000D1FC5E /* AboutCompanyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyTVC.swift; sourceTree = "<group>"; };
 		063C0CDE239142AD00D1FC5E /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				06480C0223E6AECC00D7C17E /* CleaningCompanies.json */,
+				0617E0D923E7309A000289AD /* cleaning.json */,
 			);
 			path = "JSON files";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				06480C0323E6AECC00D7C17E /* CleaningCompanies.json in Resources */,
 				06D780DC2371CD0F001B3717 /* LaunchScreen.storyboard in Resources */,
+				0617E0DA23E7309A000289AD /* cleaning.json in Resources */,
 				06D780D92371CD0F001B3717 /* Assets.xcassets in Resources */,
 				06D780D72371CD0F001B3717 /* Main.storyboard in Resources */,
 			);
