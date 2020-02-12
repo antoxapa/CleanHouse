@@ -574,10 +574,12 @@ Means do not contain harmful components for people and animals, they do not dama
                                                     <rect key="frame" x="19" y="40.5" width="395" height="209.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="395" id="K9y-JL-h2s"/>
                                                         <constraint firstAttribute="height" constant="209.5" id="rqd-jO-3kV"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eac-bt-6R2">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eac-bt-6R2">
                                                         <size key="itemSize" width="379" height="205"/>
+                                                        <size key="estimatedItemSize" width="379" height="205"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -586,7 +588,7 @@ Means do not contain harmful components for people and animals, they do not dama
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewsCVC" id="A1F-oR-kNT" customClass="ReviewsCVC" customModule="CleanHouse" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="2.5" width="379" height="205"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hUa-nB-4Eu">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BVd-7i-20r">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="205"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
@@ -639,11 +641,10 @@ Means do not contain harmful components for people and animals, they do not dama
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="ayu-FE-3ls" firstAttribute="leading" secondItem="hUa-nB-4Eu" secondAttribute="leading" constant="10" id="1VV-SA-Hda"/>
+                                                                    <constraint firstItem="ayu-FE-3ls" firstAttribute="leading" secondItem="BVd-7i-20r" secondAttribute="leading" constant="10" id="1VV-SA-Hda"/>
                                                                     <constraint firstAttribute="trailing" secondItem="S85-Ps-CRn" secondAttribute="trailing" constant="10" id="Bah-Wi-xGE"/>
-                                                                    <constraint firstItem="S85-Ps-CRn" firstAttribute="top" secondItem="hUa-nB-4Eu" secondAttribute="top" constant="10" id="DSb-YG-LdO"/>
+                                                                    <constraint firstItem="S85-Ps-CRn" firstAttribute="top" secondItem="BVd-7i-20r" secondAttribute="top" constant="10" id="DSb-YG-LdO"/>
                                                                     <constraint firstAttribute="trailing" secondItem="off-lS-UcQ" secondAttribute="trailing" constant="10" id="Ngc-AY-5Q6"/>
                                                                     <constraint firstAttribute="trailing" secondItem="ayu-FE-3ls" secondAttribute="trailing" constant="10" id="P08-dT-oMI"/>
                                                                     <constraint firstItem="off-lS-UcQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yo3-2K-d3B" secondAttribute="trailing" constant="5" id="aJw-ba-Odw"/>
@@ -652,9 +653,9 @@ Means do not contain harmful components for people and animals, they do not dama
                                                                     <constraint firstAttribute="bottom" secondItem="ayu-FE-3ls" secondAttribute="bottom" id="bRp-jl-8Ig"/>
                                                                     <constraint firstItem="yo3-2K-d3B" firstAttribute="top" secondItem="3eb-Uf-JYj" secondAttribute="bottom" constant="1" id="cgv-x5-5Gs"/>
                                                                     <constraint firstItem="ayu-FE-3ls" firstAttribute="top" secondItem="off-lS-UcQ" secondAttribute="bottom" constant="2.5" id="eD5-WE-151"/>
-                                                                    <constraint firstItem="3eb-Uf-JYj" firstAttribute="leading" secondItem="hUa-nB-4Eu" secondAttribute="leading" constant="14" id="mHL-1h-fkn"/>
-                                                                    <constraint firstItem="yo3-2K-d3B" firstAttribute="leading" secondItem="hUa-nB-4Eu" secondAttribute="leading" constant="14" id="wVc-v7-le4"/>
-                                                                    <constraint firstItem="3eb-Uf-JYj" firstAttribute="top" secondItem="hUa-nB-4Eu" secondAttribute="top" constant="8" id="xK7-Jm-S3J"/>
+                                                                    <constraint firstItem="3eb-Uf-JYj" firstAttribute="leading" secondItem="BVd-7i-20r" secondAttribute="leading" constant="14" id="mHL-1h-fkn"/>
+                                                                    <constraint firstItem="yo3-2K-d3B" firstAttribute="leading" secondItem="BVd-7i-20r" secondAttribute="leading" constant="14" id="wVc-v7-le4"/>
+                                                                    <constraint firstItem="3eb-Uf-JYj" firstAttribute="top" secondItem="BVd-7i-20r" secondAttribute="top" constant="8" id="xK7-Jm-S3J"/>
                                                                     <constraint firstItem="ayu-FE-3ls" firstAttribute="top" secondItem="yo3-2K-d3B" secondAttribute="bottom" constant="2.5" id="xOC-7d-zgh"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
@@ -676,6 +677,9 @@ Means do not contain harmful components for people and animals, they do not dama
                                                     <state key="normal" title="Write a Review" image="square.and.pencil" catalog="system">
                                                         <color key="titleColor" red="0.74976474049999997" green="0.55915790799999998" blue="0.93337160350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="F2P-uj-xV2" kind="show" identifier="writeNewReviewSegue" id="HhJ-rw-VQY"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-XZ-9WD">
                                                     <rect key="frame" x="306" y="258.5" width="93" height="22"/>
@@ -703,8 +707,8 @@ Means do not contain harmful components for people and animals, they do not dama
                                             <constraints>
                                                 <constraint firstItem="FfO-7d-vqG" firstAttribute="top" secondItem="e1Y-HQ-U3M" secondAttribute="top" constant="10" id="4kn-jX-fsi"/>
                                                 <constraint firstItem="Sk1-CJ-mcw" firstAttribute="leading" secondItem="e1Y-HQ-U3M" secondAttribute="leading" constant="20" symbolic="YES" id="A7E-fV-GYj"/>
-                                                <constraint firstAttribute="trailing" secondItem="gWB-YY-2Ni" secondAttribute="trailing" id="InL-FC-Ek6"/>
                                                 <constraint firstAttribute="bottom" secondItem="lPb-Z9-l6t" secondAttribute="bottom" constant="20" id="NeF-IQ-qQO"/>
+                                                <constraint firstItem="lPb-Z9-l6t" firstAttribute="top" secondItem="gWB-YY-2Ni" secondAttribute="bottom" constant="8.5" id="Not-0R-1n9"/>
                                                 <constraint firstItem="ZNt-XZ-9WD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lPb-Z9-l6t" secondAttribute="trailing" constant="8" symbolic="YES" id="Nse-20-ifh"/>
                                                 <constraint firstItem="gWB-YY-2Ni" firstAttribute="leading" secondItem="e1Y-HQ-U3M" secondAttribute="leading" constant="19" id="Y1b-Hm-gdr"/>
                                                 <constraint firstItem="lPb-Z9-l6t" firstAttribute="leading" secondItem="e1Y-HQ-U3M" secondAttribute="leading" constant="18" id="cpE-Pl-f7j"/>
@@ -743,7 +747,7 @@ Means do not contain harmful components for people and animals, they do not dama
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h1K-kb-RRX">
+                                                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h1K-kb-RRX">
                                                     <rect key="frame" x="20" y="47" width="394" height="242"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" red="0.74976474049999997" green="0.55915790799999998" blue="0.93337160350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -766,6 +770,7 @@ Means do not contain harmful components for people and animals, they do not dama
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="v3a-IX-9zV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="212"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="260" id="cTa-h6-Lnx"/>
                                                                             <constraint firstAttribute="height" constant="212" id="uqP-cd-sDP"/>
@@ -839,6 +844,146 @@ Means do not contain harmful components for people and animals, they do not dama
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mru-ZR-pSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3479.7101449275365" y="740.625"/>
+        </scene>
+        <!--Add New Review Controller-->
+        <scene sceneID="4Ya-R4-RIf">
+            <objects>
+                <tableViewController id="F2P-uj-xV2" customClass="AddNewReviewController" customModule="CleanHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzD-fD-bvA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="cellA" rowHeight="40" id="02L-ks-4tw" customClass="RatingCell" customModule="CleanHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="02L-ks-4tw" id="sSr-xB-FwN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QzV-Ik-o7C">
+                                            <rect key="frame" x="147" y="0.0" width="120" height="40"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCd-XG-OTB" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="rrm-qF-TLN"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate us!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NG-pT-tJP">
+                                                    <rect key="frame" x="29" y="20" width="62.5" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="jAx-RI-TlO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="QzV-Ik-o7C" secondAttribute="trailing" constant="147" id="NOC-7U-4ER"/>
+                                        <constraint firstItem="QzV-Ik-o7C" firstAttribute="leading" secondItem="sSr-xB-FwN" secondAttribute="leading" constant="147" id="SQt-Yd-jPp"/>
+                                        <constraint firstItem="QzV-Ik-o7C" firstAttribute="centerX" secondItem="sSr-xB-FwN" secondAttribute="centerX" id="wS7-ph-Lh1"/>
+                                        <constraint firstItem="QzV-Ik-o7C" firstAttribute="top" secondItem="sSr-xB-FwN" secondAttribute="top" id="zEZ-ua-euO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="cosmosRatingView" destination="ZCd-XG-OTB" id="1fq-8r-PLs"/>
+                                    <outlet property="rateUsLabel" destination="0NG-pT-tJP" id="twQ-zJ-SPC"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellB" rowHeight="40" id="mxS-wR-Eof" customClass="TitleCell" customModule="CleanHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mxS-wR-Eof" id="S3h-do-v09">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write title here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wN5-0F-Cbq">
+                                            <rect key="frame" x="20" y="4" width="374" height="34"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="an1-Ft-bqN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wN5-0F-Cbq" secondAttribute="trailing" constant="20" id="Cy4-GW-JYO"/>
+                                        <constraint firstItem="wN5-0F-Cbq" firstAttribute="centerY" secondItem="S3h-do-v09" secondAttribute="centerY" constant="1" id="HgL-J2-ceW"/>
+                                        <constraint firstItem="wN5-0F-Cbq" firstAttribute="leading" secondItem="S3h-do-v09" secondAttribute="leading" constant="20" id="NzD-UC-Foc"/>
+                                        <constraint firstItem="wN5-0F-Cbq" firstAttribute="centerX" secondItem="S3h-do-v09" secondAttribute="centerX" id="v8R-cy-lO3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="titleTextField" destination="wN5-0F-Cbq" id="wPG-yg-6pv"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellC" rowHeight="700" id="Zg1-LS-cRQ" customClass="ReviewCell" customModule="CleanHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="414" height="700"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zg1-LS-cRQ" id="gh5-Xb-Atf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-6a-Gqr">
+                                            <rect key="frame" x="15" y="0.0" width="384" height="690"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Tbr-6a-Gqr" secondAttribute="bottom" constant="10" id="3S7-Eh-W3I"/>
+                                        <constraint firstItem="Tbr-6a-Gqr" firstAttribute="top" secondItem="gh5-Xb-Atf" secondAttribute="top" id="4Hn-ku-Ddg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tbr-6a-Gqr" secondAttribute="trailing" constant="15" id="IQK-eq-1cK"/>
+                                        <constraint firstItem="Tbr-6a-Gqr" firstAttribute="leading" secondItem="gh5-Xb-Atf" secondAttribute="leading" constant="15" id="Zlu-Lf-NFf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="reviewText" destination="Tbr-6a-Gqr" id="Ens-gu-kde"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="F2P-uj-xV2" id="cge-D1-scy"/>
+                            <outlet property="delegate" destination="F2P-uj-xV2" id="QpH-VY-GzD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="5CY-RK-eKj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XOl-lw-gOq">
+                            <connections>
+                                <action selector="cancelWithSender:" destination="F2P-uj-xV2" id="v8B-bc-bMC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="T9g-5n-N8y">
+                            <connections>
+                                <action selector="doneWithSender:" destination="F2P-uj-xV2" id="PU7-d5-VsU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newReviewTableView" destination="qzD-fD-bvA" id="Wvk-Ub-6Rk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Lz-bA-KQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4599" y="741"/>
         </scene>
         <!--Companies-->
         <scene sceneID="3Fn-B8-ndZ">

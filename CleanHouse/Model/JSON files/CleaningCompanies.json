@@ -4,34 +4,17 @@
         "logo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
         "description": "Call us if you want to clean your house!",
         "about": "We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.Means do not contain harmful components for people and animals, they do not damage the surface and are easily washed off with water, restraining dirt and dust for a long time.We use only professional equipment and environmentally friendly hypoallergenic products, you are not Feel no odors after cleaning.",
-        "reviews": [
-            {
-                "id": "1",
-                "user": "1",
-                "title": "Nice!",
-                "date": "23.07.2019",
-                "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
-            },
-            {
-                "id": "2",
-                "user": "2",
-                "title": "Nice!",
-                "date": "23.07.2019",
-                "rating": "2",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
-            }
-        ],
+        "reviews": [],
         "workers": [
             {
                 "id": "1",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+                "name": "Anastasiya Riverdayl",
+                "photo": "https://st.depositphotos.com/1008047/1248/i/950/depositphotos_12486423-stock-photo-beautiful-young-cleaning-lady-isolated.jpg",
             },
             {
                 "id": "2",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+                "name": "Rami malek",
+                "photo": "https://vokrug.tv/pic/person/5/6/9/4/56945e51d1674d9e38a961a777d95bb3.jpg"
             }
         ]
     },
@@ -43,111 +26,111 @@
         "reviews": [
             {
                 "id": "1",
-                "user": "3",
+                "user": "Ya",
                 "title": "Nice!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "good",
             },
             {
                 "id": "2",
-                "user": "4",
-                "title": "Nice!",
+                "user": "Ti",
+                "title": "great!",
                 "date": "23.07.2019",
                 "rating": "2",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "great",
             },
             {
                 "id": "3",
                 "user": "5",
-                "title": "Nice!",
+                "title": "sOn",
                 "date": "23.07.2019",
                 "rating": "4",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "so-so",
             },
             {
                 "id": "4",
-                "user": "5",
-                "title": "Nice!",
+                "user": "Ona",
+                "title": "ha!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "ha-ha",
             },
             {
                 "id": "5",
-                "user": "5",
-                "title": "Nice!",
+                "user": "Ono",
+                "title": "bla!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "bla-bla",
             },
             {
                 "id": "6",
-                "user": "5",
-                "title": "Nice!",
+                "user": "1",
+                "title": "da!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "da-da",
             },
             {
                 "id": "7",
-                "user": "5",
-                "title": "Nice!",
+                "user": "2",
+                "title": "net!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "net-net",
             },
             {
                 "id": "8",
-                "user": "5",
-                "title": "Nice!",
+                "user": "3",
+                "title": "o!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "o da",
             },
             {
                 "id": "9",
-                "user": "5",
-                "title": "Nice!",
+                "user": "4",
+                "title": " !",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "o net",
             },
             {
                 "id": "10",
                 "user": "5",
-                "title": "Nice!",
+                "title": "che!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "che",
             },
             {
                 "id": "11",
-                "user": "5",
-                "title": "Nice!",
+                "user": "6",
+                "title": "chida!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "chida",
             },
             {
                 "id": "12",
-                "user": "5",
-                "title": "Nice!",
+                "user": "7",
+                "title": "cheremuha!",
                 "date": "23.07.2019",
                 "rating": "5",
-                "text": "blasdaadadadasdaadadsadadsadasdadsad",
+                "text": "cheremuha",
             }
         ],
         "workers": [
             {
                 "id": "1",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+                "name": "Anastasiya Riverdayl",
+                "photo": "https://st.depositphotos.com/1008047/1248/i/950/depositphotos_12486423-stock-photo-beautiful-young-cleaning-lady-isolated.jpg",
             },
             {
                 "id": "2",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+                "name": "Rami malek",
+                "photo": "https://vokrug.tv/pic/person/5/6/9/4/56945e51d1674d9e38a961a777d95bb3.jpg"
             }
         ]
     },
@@ -169,13 +152,13 @@
         "workers": [
             {
                 "id": "1",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+                "name": "Anastasiya Riverdayl",
+                "photo": "https://st.depositphotos.com/1008047/1248/i/950/depositphotos_12486423-stock-photo-beautiful-young-cleaning-lady-isolated.jpg",
             },
             {
                 "id": "2",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+                "name": "Rami malek",
+                "photo": "https://vokrug.tv/pic/person/5/6/9/4/56945e51d1674d9e38a961a777d95bb3.jpg"
             }
         ]
     },
@@ -197,13 +180,13 @@
         "workers": [
             {
                 "id": "1",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg",
+                "name": "Anastasiya Riverdayl",
+                "photo": "https://st.depositphotos.com/1008047/1248/i/950/depositphotos_12486423-stock-photo-beautiful-young-cleaning-lady-isolated.jpg",
             },
             {
                 "id": "2",
-                "name": "Nadya",
-                "photo": "https://i.pinimg.com/originals/24/3d/45/243d45dccfb800ffa66f9ffb32c51f33.jpg"
+                "name": "Rami malek",
+                "photo": "https://vokrug.tv/pic/person/5/6/9/4/56945e51d1674d9e38a961a777d95bb3.jpg"
             }
         ]
     }

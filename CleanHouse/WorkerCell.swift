@@ -18,6 +18,15 @@ class WorkerCell: UICollectionViewCell {
         makeRoundCorners()
     }
     
+    func configureCell(workers: WorkersRealm?) {
+        NetworkManager.shared.uploadImage(url: workers!.workerPhoto!) { (image) in
+            DispatchQueue.main.async {
+                self.workerImage.image = image
+            }
+        }
+        workerName.text = workers?.workerName
+    }
+    
     private func makeRoundCorners() {
         self.layer.cornerRadius = 15
         self.layer.masksToBounds = true

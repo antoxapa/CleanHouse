@@ -29,8 +29,6 @@ class CompaniesCVC: UICollectionViewController {
     
     var companyRealm: Results<CompanyRealm>!
     
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         addBackgroundGradient()
     }
@@ -57,15 +55,14 @@ class CompaniesCVC: UICollectionViewController {
                 for review in reviewsArray {
                     let review = ReviewsRealm(reviewUserID: review.id, reviewUser: review.user, reviewTitle: review.title, reviewDate: review.date, reviewRating: review.rating, reviewText: review.text)
                     company.reviews.append(review)
-                    
-                    if let workersArray = item.workers {
-                        for worker in workersArray {
-                            let worker = WorkersRealm(idWorker: worker.id, workerName: worker.name, workerPhoto: worker.photo)
-                            company.workers.append(worker)
-                        }
-                    }
                 }
             }
+        if let workersArray = item.workers {
+            for worker in workersArray {
+                let worker = WorkersRealm(idWorker: worker.id, workerName: worker.name, workerPhoto: worker.photo)
+                company.workers.append(worker)
+            }
+        }
             StorageManager.saveObject(company)
         }
     }

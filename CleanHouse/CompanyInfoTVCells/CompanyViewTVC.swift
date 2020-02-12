@@ -38,24 +38,27 @@ class CompanyViewTVC: UITableViewCell {
     @IBOutlet weak var mainRatingLabel: UILabel!
     
     func setupRating(company: CompanyRealm?) {
-        var ratingArray = [Double]()
-        if let reviewsList = company?.reviews {
-            for item in reviewsList {
-                guard let rating = item.reviewRating else { return mainRatingLabel.isHidden = true }
-                if let doubleRating = Double(rating) {
-                    ratingArray.append(doubleRating)
+        if company?.reviews.first != nil {
+            var ratingArray = [Double]()
+            if let reviewsList = company?.reviews {
+                for item in reviewsList {
+                    guard let rating = item.reviewRating else { return mainRatingLabel.isHidden = true }
+                    if let doubleRating = Double(rating) {
+                        ratingArray.append(doubleRating)
+                        let sum = ratingArray.reduce(0,+)
+                        mainRatingView.rating = sum / Double(ratingArray.count)
+                        mainRatingLabel.text = String(format: "%.1f", (sum / Double(ratingArray.count)))
+                    } else {
+                        mainRatingLabel.isHidden = true
+                    }
                 }
             }
-            let sum = ratingArray.reduce(0,+)
-            mainRatingView.rating = sum / Double(ratingArray.count)
-            mainRatingLabel.text = String(format: "%.1f", (sum / Double(ratingArray.count)))
         } else {
             mainRatingLabel.isHidden = true
         }
     }
     
     func setupCell(company: CompanyRealm?) {
-        
         companyName.text = company?.companyName
         aboutCompany.text = company?.companyDescription
     }

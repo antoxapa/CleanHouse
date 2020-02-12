@@ -28,13 +28,13 @@ class RatingTVC: UITableViewCell {
             guard let rating = item.reviewRating else { return }
             if let intRating = Int(rating) {
                 ratingArray.append(intRating)
+                let sum = ratingArray.reduce(0,+)
+                let averageRating = Double(sum) / Double(ratingArray.count)
+                averageRatingLabel.text = String(format: "%.1f", averageRating)
+                countRatingLabel.text = "\(company.reviews.count) Ratings"
+                setupProgressViews(ratingArray: ratingArray)
             }
         }
-        let sum = ratingArray.reduce(0,+)
-        let averageRating = Double(sum) / Double(ratingArray.count)
-        averageRatingLabel.text = String(format: "%.1f", averageRating)
-        countRatingLabel.text = "\(company.reviews.count) Ratings"
-        setupProgressViews(ratingArray: ratingArray)
     }
     
     private func setupProgressViews(ratingArray: [Int]) {

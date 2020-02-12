@@ -21,6 +21,17 @@ class ReviewsCVC: UICollectionViewCell {
         super.awakeFromNib()
         self.layer.cornerRadius = 15
     }
+func setupCell(review: ReviewsRealm) {
+        reviewAuthor.text = review.reviewUser
+        reviewDate.text = review.reviewDate
+        reviewText.text = review.reviewText
+        reviewHeader.text = review.reviewTitle
+        if let rating = Double(review.reviewRating!) {
+            reviewRating.rating = rating
+        }
+    }
 }
+
+
 
 

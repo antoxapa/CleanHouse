@@ -12,7 +12,7 @@ class CompanyInfoDelegate: NSObject, UITableViewDelegate {
     
     var company: CompanyRealm?
     var selectedIndex: IndexPath?
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 190
@@ -22,14 +22,22 @@ class CompanyInfoDelegate: NSObject, UITableViewDelegate {
             }
             return 120
         } else if indexPath.row == 2 {
-            return 120
+            if company?.reviews.count != 0 {
+                return 120
+            }
+            return 0
         }else if indexPath.row == 3 {
-//            if company?.reviewText == "" {
-//                return 100
-//            }
-            return 300
+            if company != nil {
+                if company!.reviews.count >= 3{
+                    return 300
+                }
+            }
+            return 75
         } else {
-            return 300
+            if company?.workers.count != 0 {
+                return 300
+            }
+            return 0
         }
     }
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

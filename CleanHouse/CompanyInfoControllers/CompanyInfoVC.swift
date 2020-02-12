@@ -18,14 +18,14 @@ class CompanyInfoVC: UIViewController {
     private let delegate = CompanyInfoDelegate()
     
     private var gradient: CAGradientLayer! {
-          didSet {
-              gradient.startPoint = CGPoint(x: 0, y: 0)
-              gradient.endPoint = CGPoint(x: 0.3, y: 1)
-              let startColor = #colorLiteral(red: 0.8174410462, green: 0.912994802, blue: 0.8981556296, alpha: 1).cgColor
-              let endColor = #colorLiteral(red: 0.9568017125, green: 0.9568541646, blue: 0.9610589147, alpha: 1).cgColor
-              gradient.colors = [startColor, endColor]
-          }
-      }
+        didSet {
+            gradient.startPoint = CGPoint(x: 0, y: 0)
+            gradient.endPoint = CGPoint(x: 0.3, y: 1)
+            let startColor = #colorLiteral(red: 0.8174410462, green: 0.912994802, blue: 0.8981556296, alpha: 1).cgColor
+            let endColor = #colorLiteral(red: 0.9568017125, green: 0.9568541646, blue: 0.9610589147, alpha: 1).cgColor
+            gradient.colors = [startColor, endColor]
+        }
+    }
     
     @IBOutlet weak var companiesTableView: UITableView!
     
@@ -33,6 +33,7 @@ class CompanyInfoVC: UIViewController {
         addBackgroundGradient()
         companiesTableView.estimatedRowHeight = 44
         companiesTableView.rowHeight = UITableView.automaticDimension
+        companiesTableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -44,7 +45,14 @@ class CompanyInfoVC: UIViewController {
         delegate.selectedIndex = selectedIndex
         delegate.company = company
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "writeNewReviewSegue" {
+            guard let dvc = segue.destination as? AddNewReviewController else { return }
+            dvc.company = company
+        }
+    }
+    
     private func addBackgroundGradient() {
         let gradientBackgroundView = UIView()
         gradient = CAGradientLayer()

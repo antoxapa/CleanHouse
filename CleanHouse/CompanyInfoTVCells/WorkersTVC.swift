@@ -12,37 +12,32 @@ class WorkersTVC: UITableViewCell {
 
     @IBOutlet weak var ourWorkersLabel: UILabel!
     @IBOutlet weak var workerCollectionView: UICollectionView!
-    var workersNamesArray = [String]()
-    var workersImagesArray = [UIImage]()
+    
+    var company: CompanyRealm?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         workerCollectionView.delegate = self
         workerCollectionView.dataSource = self
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(company: CompanyRealm?) {
+        self.company = company
     }
-
 }
 extension WorkersTVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return workersNamesArray.count
+        if let count = company?.workers.count {
+            return count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "workersCell", for: indexPath) as? WorkerCell else {
             return UICollectionViewCell()
         }
-        cell.workerName.text = workersNamesArray[indexPath.row]
-        if workersImagesArray.count > indexPath.row  {
-            DispatchQueue.main.async {
-                cell.workerImage.image = self.workersImagesArray[indexPath.row]
-            }
-        }
+        cell.configureCell(workers: company?.workers[indexPath.row])
         return cell
     }
 }
